@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Profesional | Nuansa Coklat</title>
+    <title>SANA | Fashion Muslim & Kasual Elegan</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
     <script>
         tailwind.config = {
@@ -17,413 +17,452 @@
                 extend: {
                     colors: {
                         brown: {
-                            50: '#fdf8f6',
-                            100: '#f2e8e5',
-                            200: '#eaddd7',
-                            300: '#e0cec7',
-                            500: '#a1887f', // Coklat muda
-                            700: '#5d4037', // Coklat sedang
-                            800: '#4e342e', // Coklat tua
-                            900: '#3e2723', // Coklat sangat tua
+                            50: '#F9F5F3',  /* Cream sangat muda */
+                            100: '#F0EBE9',
+                            200: '#DBCDC7',
+                            300: '#C6B0A6',
+                            400: '#B09386',
+                            500: '#9C7868', /* Coklat Utama */
+                            600: '#7D6053',
+                            700: '#5E483F',
+                            800: '#3F302A', /* Coklat Tua */
+                            900: '#201815',
                         }
                     },
                     fontFamily: {
-                        sans: ['Poppins', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Lato', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
-
     <style>
-        /* Styling tambahan untuk transisi halus */
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+        /* Efek Fade In sederhana */
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body class="font-sans text-gray-700 antialiased bg-brown-50">
 
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white shadow-sm py-4">
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm shadow-sm py-4">
         <div class="container mx-auto px-6 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-brown-800 tracking-wider">
-                <i class="fas fa-layer-group mr-2"></i>PORTOFOLIO
+            <a href="#" class="text-3xl font-serif font-bold text-brown-800 tracking-widest border-2 border-brown-800 px-2 py-1">
+                SANA.
             </a>
             
-            <div class="hidden md:flex space-x-6 text-sm font-medium text-brown-700">
-                <a href="#home" class="hover:text-brown-900 transition">Home</a>
-                <a href="#about" class="hover:text-brown-900 transition">About</a>
-                <a href="#services" class="hover:text-brown-900 transition">Services</a>
-                <a href="#projects" class="hover:text-brown-900 transition">Projects</a>
-                <a href="#pricing" class="hover:text-brown-900 transition">Pricing</a>
-                <a href="#contact" class="hover:text-brown-900 transition">Contact</a>
+            <div class="hidden lg:flex space-x-8 text-xs font-bold uppercase tracking-widest text-brown-700">
+                <a href="#home" class="hover:text-brown-500 transition">Home</a>
+                <a href="#about" class="hover:text-brown-500 transition">About</a>
+                <a href="#projects" class="hover:text-brown-500 transition">Collection</a>
+                <a href="#features" class="hover:text-brown-500 transition">Features</a>
+                <a href="#pricing" class="hover:text-brown-500 transition">Pricing</a>
+                <a href="#blog" class="hover:text-brown-500 transition">Blog</a>
+                <a href="#contact" class="hover:text-brown-500 transition">Contact</a>
             </div>
 
-            <button id="mobile-menu-btn" class="md:hidden text-brown-800 text-2xl focus:outline-none">
-                <i class="fas fa-bars"></i>
-            </button>
+            <div class="flex items-center space-x-4">
+                <a href="#" class="text-brown-800 hover:text-brown-500"><i class="fas fa-shopping-bag text-xl"></i></a>
+                <button id="mobile-menu-btn" class="lg:hidden text-brown-800 text-2xl focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-white w-full absolute top-full left-0 shadow-md border-t border-gray-100">
-            <div class="flex flex-col px-6 py-4 space-y-3">
-                <a href="#home" class="text-brown-700 hover:text-brown-900">Home</a>
-                <a href="#about" class="text-brown-700 hover:text-brown-900">About</a>
-                <a href="#services" class="text-brown-700 hover:text-brown-900">Services</a>
-                <a href="#projects" class="text-brown-700 hover:text-brown-900">Projects</a>
-                <a href="#contact" class="text-brown-700 hover:text-brown-900">Contact</a>
+        <div id="mobile-menu" class="hidden lg:hidden bg-white w-full absolute top-full left-0 shadow-lg border-t border-brown-100">
+            <div class="flex flex-col px-6 py-4 space-y-4 font-bold text-brown-800 text-sm uppercase">
+                <a href="#home" class="hover:text-brown-500">Home</a>
+                <a href="#about" class="hover:text-brown-500">About</a>
+                <a href="#projects" class="hover:text-brown-500">Collection</a>
+                <a href="#pricing" class="hover:text-brown-500">Pricing</a>
+                <a href="#contact" class="hover:text-brown-500">Contact</a>
             </div>
         </div>
     </nav>
 
-    <header id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 flex items-center min-h-screen bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
-        <div class="absolute inset-0 bg-brown-900 opacity-80"></div>
+    <header id="home" class="relative h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
+        <div class="absolute inset-0 bg-black/30"></div>
         
-        <div class="container mx-auto px-6 relative z-10 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight">
-                Membangun Solusi Digital <br> <span class="text-brown-300">Elegan & Profesional</span>
+        <div class="container mx-auto px-6 relative z-10 text-center fade-in-up">
+            <p class="text-white text-sm md:text-base uppercase tracking-[0.3em] mb-4">Timeless Elegance</p>
+            <h1 class="text-5xl md:text-7xl font-serif font-bold text-white mb-6 leading-tight">
+                Gaya Alami <br> <span class="italic font-light">Nuansa Bumi</span>
             </h1>
-            <p class="text-gray-200 text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-                Kami membantu bisnis Anda tumbuh dengan desain web yang menarik dan strategi digital yang efektif.
+            <p class="text-gray-100 text-lg mb-10 max-w-xl mx-auto font-light">
+                Temukan koleksi pakaian yang terinspirasi dari warna alam. Nyaman, elegan, dan ramah lingkungan.
             </p>
-            <div class="flex justify-center gap-4">
-                <a href="#projects" class="bg-brown-500 hover:bg-brown-700 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-lg transform hover:-translate-y-1">
-                    Lihat Karya
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#projects" class="bg-white text-brown-800 font-bold py-3 px-8 hover:bg-brown-100 transition duration-300 uppercase tracking-wider text-sm">
+                    Lihat Koleksi
                 </a>
-                <a href="#contact" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-brown-900 font-semibold py-3 px-8 rounded-full transition duration-300">
-                    Hubungi Kami
+                <a href="#about" class="bg-transparent border border-white text-white font-bold py-3 px-8 hover:bg-white hover:text-brown-800 transition duration-300 uppercase tracking-wider text-sm">
+                    Tentang Kami
                 </a>
             </div>
         </div>
     </header>
 
-    <section id="about" class="py-20 bg-white">
+    <section id="about" class="py-24 bg-brown-50">
         <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="md:w-1/2">
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="About Team" class="rounded-lg shadow-2xl">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2 relative">
+                    <div class="absolute -top-4 -left-4 w-full h-full border-2 border-brown-400"></div>
+                    <img src="https://images.unsplash.com/photo-1550614000-4b9519e02d48?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="About Fashion" class="relative z-10 w-full shadow-xl grayscale hover:grayscale-0 transition duration-700">
                 </div>
                 <div class="md:w-1/2">
-                    <h4 class="text-brown-700 font-bold uppercase text-sm tracking-widest mb-2">Tentang Kami</h4>
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Kreativitas Bertemu Strategi</h2>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Kami adalah agensi digital yang berfokus pada kualitas dan hasil. Dengan pengalaman bertahun-tahun dalam industri kreatif, kami memahami bagaimana mengubah ide menjadi realitas digital yang memukau. Warna coklat melambangkan keandalan kami yang membumi namun tetap elegan.
+                    <h4 class="text-brown-500 font-bold uppercase text-xs tracking-widest mb-2">Filosofi Brand</h4>
+                    <h2 class="text-4xl font-serif font-bold text-brown-900 mb-6">Cerita di Balik Jahitan</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed font-light">
+                        SANA didirikan dengan satu tujuan: menghadirkan kenyamanan tanpa mengorbankan gaya. Kami memilih palet warna *earth tone* karena sifatnya yang menenangkan dan *timeless*.
                     </p>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-center text-gray-700"><i class="fas fa-check text-brown-700 mr-3"></i> Desain User-Friendly</li>
-                        <li class="flex items-center text-gray-700"><i class="fas fa-check text-brown-700 mr-3"></i> Kode Bersih & Cepat</li>
-                        <li class="flex items-center text-gray-700"><i class="fas fa-check text-brown-700 mr-3"></i> Support 24/7</li>
-                    </ul>
+                    <p class="text-gray-600 mb-8 leading-relaxed font-light">
+                        Setiap potong pakaian dibuat dengan memperhatikan detail, menggunakan bahan katun organik yang lembut di kulit dan ramah terhadap lingkungan.
+                    </p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Signature_sample.svg/1200px-Signature_sample.svg.png" alt="Signature" class="h-12 opacity-60">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="services" class="py-20 bg-brown-50">
+    <section id="services" class="py-20 bg-white">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold text-brown-900 mb-4">Layanan Kami</h2>
-            <p class="text-gray-600 max-w-xl mx-auto mb-12">Solusi lengkap untuk kebutuhan digital bisnis Anda.</p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-brown-700">
-                    <div class="w-16 h-16 bg-brown-100 rounded-full flex items-center justify-center mx-auto mb-6 text-brown-800 text-2xl">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Web Development</h3>
-                    <p class="text-gray-600 text-sm">Pembuatan website responsif, cepat, dan aman menggunakan teknologi terbaru.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 divide-y md:divide-y-0 md:divide-x divide-brown-100">
+                <div class="px-4 py-4">
+                    <i class="fas fa-shipping-fast text-4xl text-brown-600 mb-4"></i>
+                    <h3 class="text-lg font-bold uppercase tracking-widest mb-2">Gratis Ongkir</h3>
+                    <p class="text-sm text-gray-500">Ke seluruh wilayah Indonesia untuk pembelian di atas 500rb.</p>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-brown-700">
-                    <div class="w-16 h-16 bg-brown-100 rounded-full flex items-center justify-center mx-auto mb-6 text-brown-800 text-2xl">
-                        <i class="fas fa-paint-brush"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">UI/UX Design</h3>
-                    <p class="text-gray-600 text-sm">Desain antarmuka yang intuitif dan pengalaman pengguna yang menyenangkan.</p>
+                <div class="px-4 py-4">
+                    <i class="fas fa-leaf text-4xl text-brown-600 mb-4"></i>
+                    <h3 class="text-lg font-bold uppercase tracking-widest mb-2">Bahan Organik</h3>
+                    <p class="text-sm text-gray-500">100% Katun Linen premium yang ramah lingkungan.</p>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-brown-700">
-                    <div class="w-16 h-16 bg-brown-100 rounded-full flex items-center justify-center mx-auto mb-6 text-brown-800 text-2xl">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Digital Marketing</h3>
-                    <p class="text-gray-600 text-sm">Strategi pemasaran untuk meningkatkan jangkauan dan konversi bisnis Anda.</p>
+                <div class="px-4 py-4">
+                    <i class="fas fa-undo text-4xl text-brown-600 mb-4"></i>
+                    <h3 class="text-lg font-bold uppercase tracking-widest mb-2">Garansi 7 Hari</h3>
+                    <p class="text-sm text-gray-500">Jaminan tukar ukuran jika pakaian tidak pas.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="features" class="py-20 bg-white">
+    <section id="projects" class="py-24 bg-brown-100">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-brown-900">Fitur Unggulan</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <i class="fas fa-rocket text-4xl text-brown-700 mb-4"></i>
-                    <h3 class="text-lg font-bold mb-2">Performa Cepat</h3>
-                    <p class="text-sm text-gray-600">Optimasi kecepatan load website.</p>
-                </div>
-                <div class="text-center">
-                    <i class="fas fa-mobile-alt text-4xl text-brown-700 mb-4"></i>
-                    <h3 class="text-lg font-bold mb-2">Mobile Friendly</h3>
-                    <p class="text-sm text-gray-600">Tampilan sempurna di semua perangkat.</p>
-                </div>
-                <div class="text-center">
-                    <i class="fas fa-shield-alt text-4xl text-brown-700 mb-4"></i>
-                    <h3 class="text-lg font-bold mb-2">Keamanan Tinggi</h3>
-                    <p class="text-sm text-gray-600">Proteksi data dan privasi terjamin.</p>
-                </div>
-                <div class="text-center">
-                    <i class="fas fa-headset text-4xl text-brown-700 mb-4"></i>
-                    <h3 class="text-lg font-bold mb-2">Support Ahli</h3>
-                    <p class="text-sm text-gray-600">Tim teknis siap membantu Anda.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="py-20 bg-brown-900 text-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold">Karya Terbaru</h2>
-                <p class="text-brown-200 mt-2">Beberapa proyek pilihan yang telah kami selesaikan.</p>
+                <h2 class="text-4xl font-serif font-bold text-brown-900 mb-3">Koleksi Musim Ini</h2>
+                <div class="w-16 h-1 bg-brown-500 mx-auto"></div>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="group relative overflow-hidden rounded-lg cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Project 1" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
-                    <div class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center flex-col">
-                        <h3 class="text-xl font-bold">Aplikasi Finansial</h3>
-                        <p class="text-sm text-gray-300">Web Development</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group relative overflow-hidden bg-white shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Dress" class="w-full h-[500px] object-cover transition duration-500 group-hover:scale-105">
+                    <div class="absolute bottom-0 left-0 w-full bg-white/90 p-6 translate-y-full group-hover:translate-y-0 transition duration-300">
+                        <h3 class="text-xl font-serif font-bold text-brown-900">Summer Dress</h3>
+                        <p class="text-sm text-gray-500 mb-3">Cream Linen</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-brown-700">Rp 450.000</span>
+                            <button class="text-xs uppercase font-bold border-b border-black hover:text-brown-600">Add to Cart</button>
+                        </div>
                     </div>
                 </div>
-                <div class="group relative overflow-hidden rounded-lg cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Project 2" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
-                    <div class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center flex-col">
-                        <h3 class="text-xl font-bold">Dashboard Admin</h3>
-                        <p class="text-sm text-gray-300">UI/UX Design</p>
-                    </div>
-                </div>
-                <div class="group relative overflow-hidden rounded-lg cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Project 3" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500">
-                    <div class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center flex-col">
-                        <h3 class="text-xl font-bold">E-Commerce Kopi</h3>
-                        <p class="text-sm text-gray-300">Full Stack</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="team" class="py-20 bg-brown-50">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold text-brown-900 mb-12">Tim Kami</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Team 1" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-brown-200">
-                    <h3 class="text-xl font-bold">Budi Santoso</h3>
-                    <p class="text-brown-600 text-sm">CEO & Founder</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Team 2" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-brown-200">
-                    <h3 class="text-xl font-bold">Siti Aminah</h3>
-                    <p class="text-brown-600 text-sm">Lead Designer</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Team 3" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-brown-200">
-                    <h3 class="text-xl font-bold">Andi Pratama</h3>
-                    <p class="text-brown-600 text-sm">Senior Developer</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="pricing" class="py-20 bg-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold text-brown-900 mb-12">Paket Harga</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                 
-                <div class="border border-gray-200 rounded-lg p-8 hover:shadow-lg transition">
-                    <h3 class="text-lg font-bold text-gray-500 mb-4">Basic</h3>
-                    <div class="text-4xl font-bold text-brown-800 mb-6">Rp 1jt<span class="text-sm font-normal text-gray-500">/proyek</span></div>
-                    <ul class="text-left text-gray-600 space-y-3 mb-8 text-sm">
-                        <li><i class="fas fa-check text-green-500 mr-2"></i> 1 Halaman Landing Page</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i> Responsive Mobile</li>
-                        <li><i class="fas fa-times text-red-300 mr-2"></i> Custom Domain</li>
-                    </ul>
-                    <a href="#" class="block w-full py-2 px-4 bg-gray-100 hover:bg-gray-200 text-brown-800 font-semibold rounded-lg transition">Pilih Paket</a>
+                <div class="group relative overflow-hidden bg-white shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Outer" class="w-full h-[500px] object-cover transition duration-500 group-hover:scale-105">
+                    <div class="absolute bottom-0 left-0 w-full bg-white/90 p-6 translate-y-full group-hover:translate-y-0 transition duration-300">
+                        <h3 class="text-xl font-serif font-bold text-brown-900">Classic Blazer</h3>
+                        <p class="text-sm text-gray-500 mb-3">Brown Earth</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-brown-700">Rp 650.000</span>
+                            <button class="text-xs uppercase font-bold border-b border-black hover:text-brown-600">Add to Cart</button>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="border-2 border-brown-700 rounded-lg p-8 shadow-xl relative transform scale-105 bg-brown-50">
-                    <div class="absolute top-0 right-0 bg-brown-700 text-white text-xs px-2 py-1 rounded-bl-lg">POPULAR</div>
-                    <h3 class="text-lg font-bold text-brown-700 mb-4">Professional</h3>
-                    <div class="text-4xl font-bold text-brown-800 mb-6">Rp 5jt<span class="text-sm font-normal text-gray-500">/proyek</span></div>
-                    <ul class="text-left text-gray-600 space-y-3 mb-8 text-sm">
-                        <li><i class="fas fa-check text-green-500 mr-2"></i> 5 Halaman Website</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i> SEO Basic</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i> Gratis Domain 1th</li>
-                    </ul>
-                    <a href="#" class="block w-full py-2 px-4 bg-brown-700 hover:bg-brown-800 text-white font-semibold rounded-lg transition">Pilih Paket</a>
+                <div class="group relative overflow-hidden bg-white shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Scarf" class="w-full h-[500px] object-cover transition duration-500 group-hover:scale-105">
+                    <div class="absolute bottom-0 left-0 w-full bg-white/90 p-6 translate-y-full group-hover:translate-y-0 transition duration-300">
+                        <h3 class="text-xl font-serif font-bold text-brown-900">Silk Scarf</h3>
+                        <p class="text-sm text-gray-500 mb-3">Mocca Pattern</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-brown-700">Rp 199.000</span>
+                            <button class="text-xs uppercase font-bold border-b border-black hover:text-brown-600">Add to Cart</button>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="border border-gray-200 rounded-lg p-8 hover:shadow-lg transition">
-                    <h3 class="text-lg font-bold text-gray-500 mb-4">Enterprise</h3>
-                    <div class="text-4xl font-bold text-brown-800 mb-6">Negosiasi<span class="text-sm font-normal text-gray-500"></span></div>
-                    <ul class="text-left text-gray-600 space-y-3 mb-8 text-sm">
-                        <li><i class="fas fa-check text-green-500 mr-2"></i> Aplikasi Custom</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i> Integrasi Database</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i> Support Prioritas</li>
-                    </ul>
-                    <a href="#" class="block w-full py-2 px-4 bg-gray-100 hover:bg-gray-200 text-brown-800 font-semibold rounded-lg transition">Kontak Kami</a>
-                </div>
-
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block border border-brown-800 text-brown-800 py-3 px-10 hover:bg-brown-800 hover:text-white transition uppercase text-sm font-bold tracking-widest">
+                    Lihat Semua Produk
+                </a>
             </div>
         </div>
     </section>
 
-    <section id="testimonials" class="py-20 bg-brown-900 text-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-12">Apa Kata Klien</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <div class="bg-brown-800 p-8 rounded-xl italic">
-                    <p class="mb-4">"Website yang dibuat sangat elegan dan sesuai dengan branding kopi kami. Penjualan meningkat drastis!"</p>
-                    <div class="font-bold not-italic">- Ahmad, Pemilik Cafe</div>
-                </div>
-                <div class="bg-brown-800 p-8 rounded-xl italic">
-                    <p class="mb-4">"Tim sangat profesional, pengerjaan cepat dan hasilnya di luar ekspektasi saya. Recommended!"</p>
-                    <div class="font-bold not-italic">- Sarah, Entrepreneur</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="faq" class="py-20 bg-white">
-        <div class="container mx-auto px-6 max-w-3xl">
-            <h2 class="text-3xl font-bold text-brown-900 text-center mb-12">FAQ</h2>
-            <div class="space-y-4">
-                <details class="group bg-brown-50 p-6 rounded-lg cursor-pointer">
-                    <summary class="flex justify-between items-center font-medium text-brown-900 list-none">
-                        <span>Berapa lama pengerjaan website?</span>
-                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
-                    </summary>
-                    <p class="text-gray-600 mt-4 group-open:animate-fadeIn">Tergantung kompleksitas, untuk landing page biasanya 3-5 hari kerja.</p>
-                </details>
-                <details class="group bg-brown-50 p-6 rounded-lg cursor-pointer">
-                    <summary class="flex justify-between items-center font-medium text-brown-900 list-none">
-                        <span>Apakah ada garansi?</span>
-                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
-                    </summary>
-                    <p class="text-gray-600 mt-4 group-open:animate-fadeIn">Ya, kami memberikan garansi maintenance gratis selama 1 bulan setelah website launching.</p>
-                </details>
-                <details class="group bg-brown-50 p-6 rounded-lg cursor-pointer">
-                    <summary class="flex justify-between items-center font-medium text-brown-900 list-none">
-                        <span>Apakah saya perlu menyediakan konten?</span>
-                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
-                    </summary>
-                    <p class="text-gray-600 mt-4 group-open:animate-fadeIn">Idealnya ya, namun kami juga menyediakan jasa copywriting jika Anda membutuhkannya.</p>
-                </details>
-            </div>
-        </div>
-    </section>
-
-    <section id="blog" class="py-20 bg-brown-50">
+    <section id="features" class="py-20 bg-brown-800 text-white">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-brown-900 text-center mb-12">Artikel Terbaru</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1493421419110-74f4e21bec70?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <span class="text-xs text-brown-500 font-bold uppercase">Tips</span>
-                        <h3 class="text-xl font-bold text-brown-900 mt-2 mb-3">Tren Desain 2024</h3>
-                        <p class="text-gray-600 text-sm mb-4">Warna-warna earth tone kembali mendominasi...</p>
-                        <a href="#" class="text-brown-700 font-semibold hover:underline">Baca Selengkapnya</a>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 pr-0 md:pr-10">
+                    <h2 class="text-3xl font-serif font-bold mb-6">Kenapa Memilih SANA?</h2>
+                    <div class="space-y-6">
+                        <div class="flex">
+                            <div class="flex-shrink-0 mr-4 bg-brown-700 w-12 h-12 flex items-center justify-center rounded-full">
+                                <i class="fas fa-ruler-combined"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Perfect Fit</h4>
+                                <p class="text-brown-200 text-sm">Pola baju didesain khusus untuk bentuk tubuh wanita Asia.</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0 mr-4 bg-brown-700 w-12 h-12 flex items-center justify-center rounded-full">
+                                <i class="fas fa-tshirt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Premium Fabric</h4>
+                                <p class="text-brown-200 text-sm">Bahan tidak panas, menyerap keringat, dan tidak mudah kusut.</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0 mr-4 bg-brown-700 w-12 h-12 flex items-center justify-center rounded-full">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Handmade with Love</h4>
+                                <p class="text-brown-200 text-sm">Dijahit oleh pengrajin lokal berpengalaman dengan standar butik.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <span class="text-xs text-brown-500 font-bold uppercase">Bisnis</span>
-                        <h3 class="text-xl font-bold text-brown-900 mt-2 mb-3">Pentingnya SEO</h3>
-                        <p class="text-gray-600 text-sm mb-4">Bagaimana cara agar website Anda muncul di halaman pertama...</p>
-                        <a href="#" class="text-brown-700 font-semibold hover:underline">Baca Selengkapnya</a>
-                    </div>
-                </div>
-                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <span class="text-xs text-brown-500 font-bold uppercase">Teknologi</span>
-                        <h3 class="text-xl font-bold text-brown-900 mt-2 mb-3">Website vs Sosmed</h3>
-                        <p class="text-gray-600 text-sm mb-4">Mengapa Anda tetap butuh website meski sudah punya IG...</p>
-                        <a href="#" class="text-brown-700 font-semibold hover:underline">Baca Selengkapnya</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row gap-12">
                 <div class="md:w-1/2">
-                    <h2 class="text-3xl font-bold text-brown-900 mb-6">Hubungi Kami</h2>
-                    <p class="text-gray-600 mb-8">Siap memulai proyek Anda? Hubungi kami melalui form atau kontak di bawah ini.</p>
-                    <div class="space-y-4">
-                        <div class="flex items-center text-gray-700">
-                            <i class="fas fa-map-marker-alt w-8 text-brown-700"></i>
-                            <span>Jl. Sudirman No. 45, Jakarta Selatan</span>
-                        </div>
-                        <div class="flex items-center text-gray-700">
-                            <i class="fas fa-envelope w-8 text-brown-700"></i>
-                            <span>hello@portofolio.com</span>
-                        </div>
-                        <div class="flex items-center text-gray-700">
-                            <i class="fas fa-phone w-8 text-brown-700"></i>
-                            <span>+62 812 3456 7890</span>
+                    <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Features Image" class="rounded-lg shadow-2xl opacity-90">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-serif font-bold text-brown-900 mb-12">Desainer Kami</h2>
+            <div class="flex justify-center flex-wrap gap-12">
+                <div class="text-center">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" class="w-40 h-40 rounded-full mx-auto object-cover border-4 border-brown-100 mb-4 grayscale hover:grayscale-0 transition">
+                    <h3 class="font-bold text-lg">Elena Putri</h3>
+                    <p class="text-brown-500 text-xs uppercase tracking-widest">Lead Designer</p>
+                </div>
+                <div class="text-center">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" class="w-40 h-40 rounded-full mx-auto object-cover border-4 border-brown-100 mb-4 grayscale hover:grayscale-0 transition">
+                    <h3 class="font-bold text-lg">Reza Hartono</h3>
+                    <p class="text-brown-500 text-xs uppercase tracking-widest">Fashion Stylist</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="py-20 bg-brown-50">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-serif font-bold text-brown-900 mb-4">Membership</h2>
+            <p class="text-gray-600 mb-12">Gabung member untuk penawaran eksklusif.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white p-8 shadow-sm hover:shadow-xl transition border border-gray-100">
+                    <h3 class="text-lg font-bold text-brown-500 mb-4 uppercase tracking-widest">Guest</h3>
+                    <div class="text-4xl font-serif font-bold text-brown-900 mb-6">Gratis</div>
+                    <ul class="text-left text-gray-600 space-y-3 mb-8 text-sm">
+                        <li><i class="fas fa-check text-brown-500 mr-2"></i> Akses Katalog</li>
+                        <li><i class="fas fa-check text-brown-500 mr-2"></i> Newsletter Promo</li>
+                    </ul>
+                    <a href="#" class="block w-full py-3 bg-gray-100 text-brown-900 font-bold text-xs uppercase tracking-widest hover:bg-gray-200">Daftar Akun</a>
+                </div>
+
+                <div class="bg-brown-800 text-white p-8 shadow-xl relative transform md:-translate-y-4">
+                    <div class="absolute top-0 right-0 bg-yellow-600 text-white text-[10px] font-bold px-2 py-1 uppercase">Best Value</div>
+                    <h3 class="text-lg font-bold text-brown-200 mb-4 uppercase tracking-widest">Loyalist</h3>
+                    <div class="text-4xl font-serif font-bold text-white mb-6">Rp 100k<span class="text-sm font-sans font-normal opacity-70">/thn</span></div>
+                    <ul class="text-left text-gray-300 space-y-3 mb-8 text-sm">
+                        <li><i class="fas fa-check text-yellow-500 mr-2"></i> Diskon 10% All Item</li>
+                        <li><i class="fas fa-check text-yellow-500 mr-2"></i> Gratis Ongkir Tanpa Min.</li>
+                        <li><i class="fas fa-check text-yellow-500 mr-2"></i> Prioritas Pre-Order</li>
+                    </ul>
+                    <a href="#" class="block w-full py-3 bg-white text-brown-900 font-bold text-xs uppercase tracking-widest hover:bg-gray-100">Join Member</a>
+                </div>
+                
+                 <div class="bg-white p-8 shadow-sm hover:shadow-xl transition border border-gray-100">
+                    <h3 class="text-lg font-bold text-brown-500 mb-4 uppercase tracking-widest">Wholesale</h3>
+                    <div class="text-4xl font-serif font-bold text-brown-900 mb-6">Grosir</div>
+                    <ul class="text-left text-gray-600 space-y-3 mb-8 text-sm">
+                        <li><i class="fas fa-check text-brown-500 mr-2"></i> Minimal 20 Pcs</li>
+                        <li><i class="fas fa-check text-brown-500 mr-2"></i> Harga Reseller Spesial</li>
+                        <li><i class="fas fa-check text-brown-500 mr-2"></i> Support Marketing</li>
+                    </ul>
+                    <a href="#" class="block w-full py-3 bg-gray-100 text-brown-900 font-bold text-xs uppercase tracking-widest hover:bg-gray-200">Hubungi Kami</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-serif font-bold text-brown-900 text-center mb-16">Kata Mereka</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="bg-brown-50 p-8 relative">
+                    <i class="fas fa-quote-left text-4xl text-brown-200 absolute top-4 left-4"></i>
+                    <p class="text-gray-600 italic mb-6 relative z-10">"Jatuh cinta banget sama bahannya! Adem dipakai seharian di Jakarta yang panas. Warnanya juga *earthy* banget, gampang di mix and match."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h5 class="font-bold text-brown-900">Rina S.</h5>
+                            <span class="text-xs text-gray-500">Jakarta Selatan</span>
                         </div>
                     </div>
                 </div>
-                <div class="md:w-1/2 bg-brown-50 p-8 rounded-xl shadow-inner">
+                <div class="bg-brown-50 p-8 relative">
+                    <i class="fas fa-quote-left text-4xl text-brown-200 absolute top-4 left-4"></i>
+                    <p class="text-gray-600 italic mb-6 relative z-10">"Pengiriman cepat dan packagingnya rapi banget, pakai box daur ulang jadi berasa beli kado buat diri sendiri. Recommended!"</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h5 class="font-bold text-brown-900">Amanda D.</h5>
+                            <span class="text-xs text-gray-500">Bandung</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-20 bg-brown-50">
+        <div class="container mx-auto px-6 max-w-2xl">
+            <h2 class="text-3xl font-serif font-bold text-brown-900 text-center mb-10">Pertanyaan Umum</h2>
+            <div class="space-y-4">
+                <details class="group bg-white p-5 shadow-sm cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-brown-800 list-none">
+                        <span>Bagaimana cara menentukan ukuran?</span>
+                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="text-gray-600 mt-4 text-sm leading-relaxed">Kami menyediakan Size Chart di setiap halaman produk. Ukuran kami menggunakan standar ukuran Indonesia (S-XL).</p>
+                </details>
+                <details class="group bg-white p-5 shadow-sm cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-brown-800 list-none">
+                        <span>Apakah bisa tukar size?</span>
+                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="text-gray-600 mt-4 text-sm leading-relaxed">Ya, penukaran size maksimal 3 hari setelah barang diterima, dengan syarat hangtag masih terpasang.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-serif font-bold text-brown-900 text-center mb-12">Journal</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <article class="cursor-pointer group">
+                    <div class="overflow-hidden mb-4">
+                        <img src="https://images.unsplash.com/photo-1485230946086-1d99d50b25e3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-700">
+                    </div>
+                    <span class="text-xs text-brown-500 font-bold uppercase tracking-widest">Tips Fashion</span>
+                    <h3 class="text-xl font-bold text-brown-900 mt-2 mb-2 group-hover:text-brown-600 transition">Tren Warna Earth Tone 2024</h3>
+                    <p class="text-gray-500 text-sm">Cara memadukan warna coklat dan krem agar terlihat elegan...</p>
+                </article>
+                <article class="cursor-pointer group">
+                    <div class="overflow-hidden mb-4">
+                        <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-700">
+                    </div>
+                    <span class="text-xs text-brown-500 font-bold uppercase tracking-widest">Gaya Hidup</span>
+                    <h3 class="text-xl font-bold text-brown-900 mt-2 mb-2 group-hover:text-brown-600 transition">Kenapa Sustainable Fashion?</h3>
+                    <p class="text-gray-500 text-sm">Dampak industri fashion terhadap lingkungan dan solusinya...</p>
+                </article>
+                <article class="cursor-pointer group">
+                    <div class="overflow-hidden mb-4">
+                        <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-700">
+                    </div>
+                    <span class="text-xs text-brown-500 font-bold uppercase tracking-widest">OOTD</span>
+                    <h3 class="text-xl font-bold text-brown-900 mt-2 mb-2 group-hover:text-brown-600 transition">Inspirasi Outfit Kantor</h3>
+                    <p class="text-gray-500 text-sm">Tampil profesional namun tetap nyaman seharian...</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-brown-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-16">
+                <div class="md:w-1/2">
+                    <h2 class="text-4xl font-serif font-bold mb-6">Hubungi Kami</h2>
+                    <p class="text-brown-200 mb-8 font-light">Punya pertanyaan tentang produk atau kerjasama? Kirimkan pesan kepada kami.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-4 text-brown-400"></i>
+                            <div>
+                                <h5 class="font-bold">Butik SANA</h5>
+                                <p class="text-sm text-brown-200">Jl. Kemang Raya No. 12, Jakarta Selatan</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-4 text-brown-400"></i>
+                            <div>
+                                <h5 class="font-bold">Email</h5>
+                                <p class="text-sm text-brown-200">hello@sana-store.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fab fa-whatsapp mt-1 mr-4 text-brown-400"></i>
+                            <div>
+                                <h5 class="font-bold">WhatsApp</h5>
+                                <p class="text-sm text-brown-200">+62 812-3456-7890</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2 bg-white p-8 rounded text-gray-800">
                     <form>
                         <div class="mb-4">
-                            <label class="block text-gray-700 text-sm font-bold mb-2">Nama</label>
-                            <input class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-brown-500" type="text" placeholder="Nama Anda">
+                            <label class="block text-xs font-bold uppercase mb-2">Nama</label>
+                            <input type="text" class="w-full border-b-2 border-gray-200 py-2 focus:outline-none focus:border-brown-800 transition bg-transparent" placeholder="Nama Anda">
                         </div>
                         <div class="mb-4">
-                            <label class="block text-gray-700 text-sm font-bold mb-2">Email</label>
-                            <input class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-brown-500" type="email" placeholder="email@contoh.com">
+                            <label class="block text-xs font-bold uppercase mb-2">Email</label>
+                            <input type="email" class="w-full border-b-2 border-gray-200 py-2 focus:outline-none focus:border-brown-800 transition bg-transparent" placeholder="email@anda.com">
                         </div>
-                        <div class="mb-4">
-                            <label class="block text-gray-700 text-sm font-bold mb-2">Pesan</label>
-                            <textarea class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-brown-500" rows="4" placeholder="Tulis pesan Anda..."></textarea>
+                        <div class="mb-6">
+                            <label class="block text-xs font-bold uppercase mb-2">Pesan</label>
+                            <textarea rows="3" class="w-full border-b-2 border-gray-200 py-2 focus:outline-none focus:border-brown-800 transition bg-transparent" placeholder="Tulis pesan..."></textarea>
                         </div>
-                        <button class="w-full bg-brown-700 text-white font-bold py-3 px-4 rounded hover:bg-brown-800 transition">Kirim Pesan</button>
+                        <button class="w-full bg-brown-800 text-white font-bold py-3 uppercase tracking-widest hover:bg-brown-700 transition">Kirim</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-brown-900 text-brown-200 py-12">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-6 md:mb-0">
-                    <div class="text-2xl font-bold text-white mb-2">PORTOFOLIO</div>
-                    <p class="text-sm">© 2024 Hak Cipta Dilindungi.</p>
-                </div>
-                <div class="flex space-x-6">
-                    <a href="#" class="hover:text-white transition"><i class="fab fa-facebook-f fa-lg"></i></a>
-                    <a href="#" class="hover:text-white transition"><i class="fab fa-twitter fa-lg"></i></a>
-                    <a href="#" class="hover:text-white transition"><i class="fab fa-instagram fa-lg"></i></a>
-                    <a href="#" class="hover:text-white transition"><i class="fab fa-linkedin-in fa-lg"></i></a>
-                </div>
+    <footer class="bg-black text-white py-12 border-t border-gray-800">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0 text-center md:text-left">
+                <span class="text-2xl font-serif font-bold tracking-widest">SANA.</span>
+                <p class="text-xs text-gray-500 mt-2">© 2024 SANA Fashion. All rights reserved.</p>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-tiktok text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-pinterest text-xl"></i></a>
             </div>
         </div>
     </footer>
 
-    <button id="backToTopBtn" onclick="scrollToTop()" class="fixed bottom-8 right-8 bg-brown-700 hover:bg-brown-800 text-white p-4 rounded-full shadow-xl transition-all duration-300 opacity-0 invisible translate-y-10 z-50">
+    <button id="backToTopBtn" onclick="scrollToTop()" class="fixed bottom-8 right-8 bg-brown-800 hover:bg-brown-600 text-white w-12 h-12 flex items-center justify-center shadow-2xl transition-all duration-500 opacity-0 invisible translate-y-10 z-50">
         <i class="fas fa-arrow-up"></i>
     </button>
 
     <script>
-        // 1. Mobile Menu Toggle
+        // 1. Mobile Menu Logic
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
 
@@ -431,20 +470,20 @@
             menu.classList.toggle('hidden');
         });
 
-        // Close mobile menu when clicking a link
-        menu.querySelectorAll('a').forEach(link => {
+        // Close menu when link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 menu.classList.add('hidden');
             });
         });
 
-        // 2. Back to Top Button Logic
+        // 2. Back to Top & Navbar Scroll Logic
         const backToTopBtn = document.getElementById("backToTopBtn");
         const navbar = document.getElementById("navbar");
 
         window.onscroll = function() {
-            // Show/Hide Back to Top Button
-            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            // Back to Top Button Visibility
+            if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
                 backToTopBtn.classList.remove("opacity-0", "invisible", "translate-y-10");
                 backToTopBtn.classList.add("opacity-100", "visible", "translate-y-0");
             } else {
@@ -452,8 +491,8 @@
                 backToTopBtn.classList.remove("opacity-100", "visible", "translate-y-0");
             }
 
-            // Navbar shadow effect on scroll
-            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            // Navbar Visual Change
+            if (document.documentElement.scrollTop > 50) {
                 navbar.classList.add("shadow-md", "py-2");
                 navbar.classList.remove("py-4");
             } else {
@@ -462,7 +501,7 @@
             }
         };
 
-        // Scroll to Top Function
+        // Scroll to Top Action
         function scrollToTop() {
             window.scrollTo({
                 top: 0,
