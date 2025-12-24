@@ -3,127 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SANA | Fashion Muslim & Kasual Elegan</title>
+    <title>WARISAN | Eksklusif Batik & Tenun Nusantara</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Merriweather:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet">
 
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        brown: {
-                            50: '#F9F5F3',  /* Cream sangat muda */
-                            100: '#F0EBE9',
-                            200: '#DBCDC7',
-                            300: '#C6B0A6',
-                            400: '#B09386',
-                            500: '#9C7868', /* Coklat Utama */
-                            600: '#7D6053',
-                            700: '#5E483F',
-                            800: '#3F302A', /* Coklat Tua */
-                            900: '#201815',
+                        batik: {
+                            50: '#FDF8F5',
+                            100: '#F4EAE5',
+                            200: '#EADFD8',
+                            300: '#D6C0B5',
+                            500: '#A67B5B', /* Coklat Emas/Kayu */
+                            700: '#6F4E37', /* Coklat Kopi/Batik Sogan */
+                            800: '#4A3426',
+                            900: '#2B1E16', /* Coklat Sangat Gelap */
+                        },
+                        gold: {
+                            500: '#D4AF37',
                         }
                     },
                     fontFamily: {
-                        serif: ['Playfair Display', 'serif'],
-                        sans: ['Lato', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "url('https://images.unsplash.com/photo-1615873968403-89e068629265?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')",
                     }
                 }
             }
         }
     </script>
+
     <style>
-        /* Efek Fade In sederhana */
-        .fade-in-up {
-            animation: fadeInUp 0.8s ease-out;
+        /* Custom Styles untuk detail halus */
+        .glass-header {
+            background: rgba(43, 30, 22, 0.9);
+            backdrop-filter: blur(8px);
         }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        
+        /* Animasi sederhana untuk elemen */
+        .hover-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Pattern overlay tipis untuk section */
+        .bg-texture {
+            background-color: #FDF8F5;
+            background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23A67B5B' fill-opacity='0.05' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
         }
     </style>
 </head>
-<body class="font-sans text-gray-700 antialiased bg-brown-50">
+<body class="font-sans text-gray-700 antialiased bg-batik-50">
 
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm shadow-sm py-4">
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 border-b border-white/10">
         <div class="container mx-auto px-6 flex justify-between items-center">
-            <a href="#" class="text-3xl font-serif font-bold text-brown-800 tracking-widest border-2 border-brown-800 px-2 py-1">
-                SANA.
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 bg-batik-500 rounded flex items-center justify-center text-white text-xl">
+                    <i class="fas fa-feather-alt"></i>
+                </div>
+                <span class="text-2xl font-serif font-bold text-white tracking-widest group-hover:text-batik-300 transition">WARISAN</span>
             </a>
             
-            <div class="hidden lg:flex space-x-8 text-xs font-bold uppercase tracking-widest text-brown-700">
-                <a href="#home" class="hover:text-brown-500 transition">Home</a>
-                <a href="#about" class="hover:text-brown-500 transition">About</a>
-                <a href="#projects" class="hover:text-brown-500 transition">Collection</a>
-                <a href="#features" class="hover:text-brown-500 transition">Features</a>
-                <a href="#pricing" class="hover:text-brown-500 transition">Pricing</a>
-                <a href="#blog" class="hover:text-brown-500 transition">Blog</a>
-                <a href="#contact" class="hover:text-brown-500 transition">Contact</a>
+            <div class="hidden lg:flex space-x-6 text-sm font-medium text-batik-100 uppercase tracking-wider">
+                <a href="#home" class="hover:text-white transition border-b-2 border-transparent hover:border-batik-500 pb-1">Home</a>
+                <a href="#about" class="hover:text-white transition border-b-2 border-transparent hover:border-batik-500 pb-1">About</a>
+                <a href="#projects" class="hover:text-white transition border-b-2 border-transparent hover:border-batik-500 pb-1">Koleksi</a>
+                <a href="#services" class="hover:text-white transition border-b-2 border-transparent hover:border-batik-500 pb-1">Layanan</a>
+                <a href="#pricing" class="hover:text-white transition border-b-2 border-transparent hover:border-batik-500 pb-1">Harga</a>
+                <a href="#contact" class="hover:text-white transition border-b-2 border-transparent hover:border-batik-500 pb-1">Kontak</a>
             </div>
 
-            <div class="flex items-center space-x-4">
-                <a href="#" class="text-brown-800 hover:text-brown-500"><i class="fas fa-shopping-bag text-xl"></i></a>
-                <button id="mobile-menu-btn" class="lg:hidden text-brown-800 text-2xl focus:outline-none">
+            <div class="flex items-center space-x-5 text-white">
+                <a href="#" class="hover:text-batik-300"><i class="fas fa-search"></i></a>
+                <a href="#" class="hover:text-batik-300"><i class="fas fa-shopping-bag"></i></a>
+                <button id="mobile-menu-btn" class="lg:hidden text-2xl focus:outline-none">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden lg:hidden bg-white w-full absolute top-full left-0 shadow-lg border-t border-brown-100">
-            <div class="flex flex-col px-6 py-4 space-y-4 font-bold text-brown-800 text-sm uppercase">
-                <a href="#home" class="hover:text-brown-500">Home</a>
-                <a href="#about" class="hover:text-brown-500">About</a>
-                <a href="#projects" class="hover:text-brown-500">Collection</a>
-                <a href="#pricing" class="hover:text-brown-500">Pricing</a>
-                <a href="#contact" class="hover:text-brown-500">Contact</a>
+        <div id="mobile-menu" class="hidden lg:hidden bg-batik-900 w-full absolute top-full left-0 border-t border-white/10">
+            <div class="flex flex-col px-6 py-6 space-y-4 font-bold text-batik-100 text-sm uppercase">
+                <a href="#home" class="hover:text-batik-500">Home</a>
+                <a href="#about" class="hover:text-batik-500">About</a>
+                <a href="#projects" class="hover:text-batik-500">Koleksi</a>
+                <a href="#services" class="hover:text-batik-500">Layanan</a>
+                <a href="#contact" class="hover:text-batik-500">Kontak</a>
             </div>
         </div>
     </nav>
 
-    <header id="home" class="relative h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
-        <div class="absolute inset-0 bg-black/30"></div>
+    <header id="home" class="relative min-h-screen flex items-center justify-center bg-fixed bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1605218427368-2c2628468b30?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
+        <div class="absolute inset-0 bg-gradient-to-b from-batik-900/80 to-batik-900/60"></div>
         
-        <div class="container mx-auto px-6 relative z-10 text-center fade-in-up">
-            <p class="text-white text-sm md:text-base uppercase tracking-[0.3em] mb-4">Timeless Elegance</p>
-            <h1 class="text-5xl md:text-7xl font-serif font-bold text-white mb-6 leading-tight">
-                Gaya Alami <br> <span class="italic font-light">Nuansa Bumi</span>
+        <div class="container mx-auto px-6 relative z-10 text-center pt-20">
+            <div class="inline-block border border-batik-300 px-4 py-1 rounded-full text-batik-200 text-sm uppercase tracking-[0.2em] mb-4 animate-fade-in-down">
+                Keanggunan Budaya Indonesia
+            </div>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-6 leading-tight">
+                Sentuhan Batik <br> <span class="text-batik-500 italic">Berkelas Dunia</span>
             </h1>
-            <p class="text-gray-100 text-lg mb-10 max-w-xl mx-auto font-light">
-                Temukan koleksi pakaian yang terinspirasi dari warna alam. Nyaman, elegan, dan ramah lingkungan.
+            <p class="text-batik-100 text-lg md:text-xl mb-10 max-w-2xl mx-auto font-light">
+                Menghadirkan karya seni tekstil tradisional dengan potongan modern. Dibuat oleh pengrajin lokal dengan dedikasi tinggi.
             </p>
             <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="#projects" class="bg-white text-brown-800 font-bold py-3 px-8 hover:bg-brown-100 transition duration-300 uppercase tracking-wider text-sm">
+                <a href="#projects" class="bg-batik-500 hover:bg-batik-600 text-white font-semibold py-4 px-10 rounded shadow-lg transition duration-300">
                     Lihat Koleksi
                 </a>
-                <a href="#about" class="bg-transparent border border-white text-white font-bold py-3 px-8 hover:bg-white hover:text-brown-800 transition duration-300 uppercase tracking-wider text-sm">
+                <a href="#about" class="bg-transparent border border-white text-white hover:bg-white hover:text-batik-900 font-semibold py-4 px-10 rounded transition duration-300">
                     Tentang Kami
                 </a>
             </div>
         </div>
     </header>
 
-    <section id="about" class="py-24 bg-brown-50">
+    <section id="about" class="py-24 bg-texture">
         <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center gap-16">
-                <div class="md:w-1/2 relative">
-                    <div class="absolute -top-4 -left-4 w-full h-full border-2 border-brown-400"></div>
-                    <img src="https://images.unsplash.com/photo-1550614000-4b9519e02d48?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="About Fashion" class="relative z-10 w-full shadow-xl grayscale hover:grayscale-0 transition duration-700">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2 grid grid-cols-2 gap-4">
+                    <img src="https://images.unsplash.com/photo-1598343175492-9e7dc0e63cc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="rounded-lg shadow-xl w-full h-64 object-cover mt-8">
+                    <img src="https://images.unsplash.com/photo-1579781198654-2191b920401d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="rounded-lg shadow-xl w-full h-64 object-cover">
                 </div>
-                <div class="md:w-1/2">
-                    <h4 class="text-brown-500 font-bold uppercase text-xs tracking-widest mb-2">Filosofi Brand</h4>
-                    <h2 class="text-4xl font-serif font-bold text-brown-900 mb-6">Cerita di Balik Jahitan</h2>
-                    <p class="text-gray-600 mb-6 leading-relaxed font-light">
-                        SANA didirikan dengan satu tujuan: menghadirkan kenyamanan tanpa mengorbankan gaya. Kami memilih palet warna *earth tone* karena sifatnya yang menenangkan dan *timeless*.
+                
+                <div class="lg:w-1/2">
+                    <h4 class="text-batik-500 font-bold uppercase text-sm tracking-widest mb-2">Filosofi Kami</h4>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-batik-900 mb-6">Melestarikan Warisan dalam Setiap Jahitan</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Warisan didirikan atas dasar cinta mendalam terhadap kekayaan wastra Nusantara. Kami percaya bahwa Batik dan Tenun bukan sekadar kain, melainkan cerita yang tertulis dalam lilin dan benang.
                     </p>
-                    <p class="text-gray-600 mb-8 leading-relaxed font-light">
-                        Setiap potong pakaian dibuat dengan memperhatikan detail, menggunakan bahan katun organik yang lembut di kulit dan ramah terhadap lingkungan.
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Kami bekerja sama langsung dengan pengrajin di Yogyakarta, Solo, dan Pekalongan untuk memastikan keaslian motif dan kualitas bahan yang premium.
                     </p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Signature_sample.svg/1200px-Signature_sample.svg.png" alt="Signature" class="h-12 opacity-60">
+                    <div class="flex items-center gap-4">
+                        <div class="text-center">
+                            <span class="block text-3xl font-bold text-batik-700">15+</span>
+                            <span class="text-xs text-gray-500 uppercase">Tahun Berkarya</span>
+                        </div>
+                        <div class="w-px h-12 bg-gray-300"></div>
+                        <div class="text-center">
+                            <span class="block text-3xl font-bold text-batik-700">100%</span>
+                            <span class="text-xs text-gray-500 uppercase">Buatan Tangan</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -131,204 +161,240 @@
 
     <section id="services" class="py-20 bg-white">
         <div class="container mx-auto px-6 text-center">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 divide-y md:divide-y-0 md:divide-x divide-brown-100">
-                <div class="px-4 py-4">
-                    <i class="fas fa-shipping-fast text-4xl text-brown-600 mb-4"></i>
-                    <h3 class="text-lg font-bold uppercase tracking-widest mb-2">Gratis Ongkir</h3>
-                    <p class="text-sm text-gray-500">Ke seluruh wilayah Indonesia untuk pembelian di atas 500rb.</p>
+            <span class="text-batik-500 font-bold text-sm tracking-widest uppercase">Layanan Eksklusif</span>
+            <h2 class="text-3xl font-serif font-bold text-batik-900 mb-12 mt-2">Kenyamanan Berbelanja</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 border border-batik-100 rounded-xl hover:border-batik-300 hover:shadow-lg transition duration-300">
+                    <div class="w-16 h-16 mx-auto bg-batik-50 rounded-full flex items-center justify-center mb-6 text-batik-700 text-2xl">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-batik-800">Custom Fitting</h3>
+                    <p class="text-gray-600 text-sm">Sesuaikan ukuran baju dengan bentuk tubuh Anda untuk tampilan yang sempurna.</p>
                 </div>
-                <div class="px-4 py-4">
-                    <i class="fas fa-leaf text-4xl text-brown-600 mb-4"></i>
-                    <h3 class="text-lg font-bold uppercase tracking-widest mb-2">Bahan Organik</h3>
-                    <p class="text-sm text-gray-500">100% Katun Linen premium yang ramah lingkungan.</p>
+                <div class="p-8 border border-batik-100 rounded-xl hover:border-batik-300 hover:shadow-lg transition duration-300">
+                    <div class="w-16 h-16 mx-auto bg-batik-50 rounded-full flex items-center justify-center mb-6 text-batik-700 text-2xl">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-batik-800">Premium Packaging</h3>
+                    <p class="text-gray-600 text-sm">Kemasan kotak eksklusif yang cocok untuk hadiah kepada kolega atau orang terkasih.</p>
                 </div>
-                <div class="px-4 py-4">
-                    <i class="fas fa-undo text-4xl text-brown-600 mb-4"></i>
-                    <h3 class="text-lg font-bold uppercase tracking-widest mb-2">Garansi 7 Hari</h3>
-                    <p class="text-sm text-gray-500">Jaminan tukar ukuran jika pakaian tidak pas.</p>
+                <div class="p-8 border border-batik-100 rounded-xl hover:border-batik-300 hover:shadow-lg transition duration-300">
+                    <div class="w-16 h-16 mx-auto bg-batik-50 rounded-full flex items-center justify-center mb-6 text-batik-700 text-2xl">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-batik-800">Garansi Perawatan</h3>
+                    <p class="text-gray-600 text-sm">Layanan konsultasi perawatan kain batik tulis agar warna tetap cemerlang.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="py-24 bg-brown-100">
+    <section id="features" class="py-20 bg-batik-900 text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-batik-700 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-batik-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6">Keunggulan Produk Warisan</h2>
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-batik-500 text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold text-lg">Bahan Alam Pilihan</h4>
+                                <p class="text-batik-200 text-sm mt-1">Menggunakan Katun Primisima dan Sutra ATBM berkualitas tinggi.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-batik-500 text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold text-lg">Pewarna Alami</h4>
+                                <p class="text-batik-200 text-sm mt-1">Menggunakan pewarna dari kulit kayu dan daun (Indigofera) yang ramah lingkungan.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-batik-500 text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold text-lg">Limited Edition</h4>
+                                <p class="text-batik-200 text-sm mt-1">Setiap motif diproduksi dalam jumlah terbatas untuk menjaga eksklusivitas.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-5/12">
+                    <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Detail Batik" class="rounded-lg shadow-2xl border-4 border-batik-700 rotate-3 hover:rotate-0 transition duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 bg-batik-50">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-serif font-bold text-brown-900 mb-3">Koleksi Musim Ini</h2>
-                <div class="w-16 h-1 bg-brown-500 mx-auto"></div>
+                <h2 class="text-3xl font-serif font-bold text-batik-900">Koleksi Terbaru</h2>
+                <div class="w-24 h-1 bg-batik-500 mx-auto mt-4"></div>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="group relative overflow-hidden bg-white shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Dress" class="w-full h-[500px] object-cover transition duration-500 group-hover:scale-105">
-                    <div class="absolute bottom-0 left-0 w-full bg-white/90 p-6 translate-y-full group-hover:translate-y-0 transition duration-300">
-                        <h3 class="text-xl font-serif font-bold text-brown-900">Summer Dress</h3>
-                        <p class="text-sm text-gray-500 mb-3">Cream Linen</p>
-                        <div class="flex justify-between items-center">
-                            <span class="font-bold text-brown-700">Rp 450.000</span>
-                            <button class="text-xs uppercase font-bold border-b border-black hover:text-brown-600">Add to Cart</button>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover-card group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1596704017254-9b121068fb31?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Batik Pria" class="w-full h-80 object-cover transition duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <button class="bg-white text-batik-900 px-6 py-2 rounded-full font-bold hover:bg-batik-500 hover:text-white transition">Lihat Detail</button>
                         </div>
                     </div>
-                </div>
-                
-                <div class="group relative overflow-hidden bg-white shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Outer" class="w-full h-[500px] object-cover transition duration-500 group-hover:scale-105">
-                    <div class="absolute bottom-0 left-0 w-full bg-white/90 p-6 translate-y-full group-hover:translate-y-0 transition duration-300">
-                        <h3 class="text-xl font-serif font-bold text-brown-900">Classic Blazer</h3>
-                        <p class="text-sm text-gray-500 mb-3">Brown Earth</p>
-                        <div class="flex justify-between items-center">
-                            <span class="font-bold text-brown-700">Rp 650.000</span>
-                            <button class="text-xs uppercase font-bold border-b border-black hover:text-brown-600">Add to Cart</button>
+                    <div class="p-6">
+                        <h3 class="text-xl font-serif font-bold text-batik-800">Kemeja Sogan Royal</h3>
+                        <p class="text-sm text-gray-500 mb-3">Batik Tulis Solo</p>
+                        <div class="flex justify-between items-center border-t border-gray-100 pt-3">
+                            <span class="text-batik-700 font-bold">Rp 450.000</span>
+                            <i class="far fa-heart text-gray-400 hover:text-red-500 cursor-pointer"></i>
                         </div>
                     </div>
                 </div>
 
-                <div class="group relative overflow-hidden bg-white shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Scarf" class="w-full h-[500px] object-cover transition duration-500 group-hover:scale-105">
-                    <div class="absolute bottom-0 left-0 w-full bg-white/90 p-6 translate-y-full group-hover:translate-y-0 transition duration-300">
-                        <h3 class="text-xl font-serif font-bold text-brown-900">Silk Scarf</h3>
-                        <p class="text-sm text-gray-500 mb-3">Mocca Pattern</p>
-                        <div class="flex justify-between items-center">
-                            <span class="font-bold text-brown-700">Rp 199.000</span>
-                            <button class="text-xs uppercase font-bold border-b border-black hover:text-brown-600">Add to Cart</button>
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover-card group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1610427989396-03c2fb643198?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Kebaya Wanita" class="w-full h-80 object-cover transition duration-500 group-hover:scale-110">
+                         <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <button class="bg-white text-batik-900 px-6 py-2 rounded-full font-bold hover:bg-batik-500 hover:text-white transition">Lihat Detail</button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-serif font-bold text-batik-800">Kebaya Encim Modern</h3>
+                        <p class="text-sm text-gray-500 mb-3">Katun Premium</p>
+                        <div class="flex justify-between items-center border-t border-gray-100 pt-3">
+                            <span class="text-batik-700 font-bold">Rp 375.000</span>
+                            <i class="far fa-heart text-gray-400 hover:text-red-500 cursor-pointer"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover-card group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1596704017232-a567c9c05452?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Kain Tenun" class="w-full h-80 object-cover transition duration-500 group-hover:scale-110">
+                         <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <button class="bg-white text-batik-900 px-6 py-2 rounded-full font-bold hover:bg-batik-500 hover:text-white transition">Lihat Detail</button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-serif font-bold text-batik-800">Selendang Tenun Ikat</h3>
+                        <p class="text-sm text-gray-500 mb-3">Tenun Troso Jepara</p>
+                        <div class="flex justify-between items-center border-t border-gray-100 pt-3">
+                            <span class="text-batik-700 font-bold">Rp 250.000</span>
+                            <i class="far fa-heart text-gray-400 hover:text-red-500 cursor-pointer"></i>
                         </div>
                     </div>
                 </div>
             </div>
             
             <div class="text-center mt-12">
-                <a href="#" class="inline-block border border-brown-800 text-brown-800 py-3 px-10 hover:bg-brown-800 hover:text-white transition uppercase text-sm font-bold tracking-widest">
-                    Lihat Semua Produk
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="features" class="py-20 bg-brown-800 text-white">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-10 md:mb-0 pr-0 md:pr-10">
-                    <h2 class="text-3xl font-serif font-bold mb-6">Kenapa Memilih SANA?</h2>
-                    <div class="space-y-6">
-                        <div class="flex">
-                            <div class="flex-shrink-0 mr-4 bg-brown-700 w-12 h-12 flex items-center justify-center rounded-full">
-                                <i class="fas fa-ruler-combined"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-lg">Perfect Fit</h4>
-                                <p class="text-brown-200 text-sm">Pola baju didesain khusus untuk bentuk tubuh wanita Asia.</p>
-                            </div>
-                        </div>
-                        <div class="flex">
-                            <div class="flex-shrink-0 mr-4 bg-brown-700 w-12 h-12 flex items-center justify-center rounded-full">
-                                <i class="fas fa-tshirt"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-lg">Premium Fabric</h4>
-                                <p class="text-brown-200 text-sm">Bahan tidak panas, menyerap keringat, dan tidak mudah kusut.</p>
-                            </div>
-                        </div>
-                        <div class="flex">
-                            <div class="flex-shrink-0 mr-4 bg-brown-700 w-12 h-12 flex items-center justify-center rounded-full">
-                                <i class="fas fa-heart"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-lg">Handmade with Love</h4>
-                                <p class="text-brown-200 text-sm">Dijahit oleh pengrajin lokal berpengalaman dengan standar butik.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="md:w-1/2">
-                    <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Features Image" class="rounded-lg shadow-2xl opacity-90">
-                </div>
+                <a href="#" class="inline-block border-2 border-batik-700 text-batik-700 py-3 px-8 hover:bg-batik-700 hover:text-white transition rounded font-semibold">Lihat Semua Produk</a>
             </div>
         </div>
     </section>
 
     <section id="team" class="py-20 bg-white">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-serif font-bold text-brown-900 mb-12">Desainer Kami</h2>
-            <div class="flex justify-center flex-wrap gap-12">
-                <div class="text-center">
-                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" class="w-40 h-40 rounded-full mx-auto object-cover border-4 border-brown-100 mb-4 grayscale hover:grayscale-0 transition">
-                    <h3 class="font-bold text-lg">Elena Putri</h3>
-                    <p class="text-brown-500 text-xs uppercase tracking-widest">Lead Designer</p>
+            <h2 class="text-3xl font-serif font-bold text-batik-900 mb-12">Pengrajin Kami</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="group">
+                    <div class="w-40 h-40 mx-auto mb-4 rounded-full overflow-hidden border-4 border-batik-100">
+                        <img src="https://images.unsplash.com/photo-1589578228447-e1a4e481c6c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <h3 class="text-lg font-bold text-batik-800">Ibu Hartini</h3>
+                    <p class="text-sm text-batik-500">Ahli Canting Tulis (30 Thn)</p>
                 </div>
-                <div class="text-center">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" class="w-40 h-40 rounded-full mx-auto object-cover border-4 border-brown-100 mb-4 grayscale hover:grayscale-0 transition">
-                    <h3 class="font-bold text-lg">Reza Hartono</h3>
-                    <p class="text-brown-500 text-xs uppercase tracking-widest">Fashion Stylist</p>
+                <div class="group">
+                    <div class="w-40 h-40 mx-auto mb-4 rounded-full overflow-hidden border-4 border-batik-100">
+                        <img src="https://images.unsplash.com/photo-1575440707472-a1b945c71d0e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <h3 class="text-lg font-bold text-batik-800">Pak Darman</h3>
+                    <p class="text-sm text-batik-500">Spesialis Pewarnaan Alam</p>
+                </div>
+                <div class="group">
+                    <div class="w-40 h-40 mx-auto mb-4 rounded-full overflow-hidden border-4 border-batik-100">
+                        <img src="https://images.unsplash.com/photo-1554151228-14d9def656ec?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <h3 class="text-lg font-bold text-batik-800">Siti Nurbaya</h3>
+                    <p class="text-sm text-batik-500">Desainer Pola Modern</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="pricing" class="py-20 bg-brown-50">
+    <section id="pricing" class="py-20 bg-batik-50">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-serif font-bold text-brown-900 mb-4">Membership</h2>
-            <p class="text-gray-600 mb-12">Gabung member untuk penawaran eksklusif.</p>
+            <h2 class="text-3xl font-serif font-bold text-batik-900 mb-4">Kategori Harga</h2>
+            <p class="text-gray-600 mb-12">Pilih koleksi yang sesuai dengan kebutuhan acara Anda.</p>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <div class="bg-white p-8 shadow-sm hover:shadow-xl transition border border-gray-100">
-                    <h3 class="text-lg font-bold text-brown-500 mb-4 uppercase tracking-widest">Guest</h3>
-                    <div class="text-4xl font-serif font-bold text-brown-900 mb-6">Gratis</div>
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl transition relative border-t-4 border-gray-300">
+                    <h3 class="text-lg font-bold text-gray-500 mb-2 uppercase">Daily Wear</h3>
+                    <div class="text-3xl font-serif font-bold text-batik-900 mb-6">Batik Cap</div>
+                    <p class="text-gray-500 text-sm mb-6">Cocok untuk seragam kantor atau penggunaan harian.</p>
                     <ul class="text-left text-gray-600 space-y-3 mb-8 text-sm">
-                        <li><i class="fas fa-check text-brown-500 mr-2"></i> Akses Katalog</li>
-                        <li><i class="fas fa-check text-brown-500 mr-2"></i> Newsletter Promo</li>
+                        <li><i class="fas fa-check text-batik-500 mr-2"></i> Bahan Katun Prima</li>
+                        <li><i class="fas fa-check text-batik-500 mr-2"></i> Motif Modern</li>
+                        <li><i class="fas fa-check text-batik-500 mr-2"></i> Jahitan Konfeksi Rapi</li>
                     </ul>
-                    <a href="#" class="block w-full py-3 bg-gray-100 text-brown-900 font-bold text-xs uppercase tracking-widest hover:bg-gray-200">Daftar Akun</a>
+                    <a href="#" class="block w-full py-2 bg-gray-100 text-batik-800 font-bold rounded hover:bg-gray-200 transition">Lihat Katalog</a>
                 </div>
 
-                <div class="bg-brown-800 text-white p-8 shadow-xl relative transform md:-translate-y-4">
-                    <div class="absolute top-0 right-0 bg-yellow-600 text-white text-[10px] font-bold px-2 py-1 uppercase">Best Value</div>
-                    <h3 class="text-lg font-bold text-brown-200 mb-4 uppercase tracking-widest">Loyalist</h3>
-                    <div class="text-4xl font-serif font-bold text-white mb-6">Rp 100k<span class="text-sm font-sans font-normal opacity-70">/thn</span></div>
+                <div class="bg-batik-900 text-white p-8 rounded-lg shadow-xl relative transform md:-translate-y-4 border-t-4 border-batik-500">
+                    <div class="absolute top-0 right-0 bg-batik-500 text-white text-xs px-2 py-1 rounded-bl">TERLARIS</div>
+                    <h3 class="text-lg font-bold text-batik-200 mb-2 uppercase">Executive</h3>
+                    <div class="text-3xl font-serif font-bold text-white mb-6">Batik Tulis</div>
+                    <p class="text-gray-400 text-sm mb-6">Untuk acara formal, kondangan, dan meeting penting.</p>
                     <ul class="text-left text-gray-300 space-y-3 mb-8 text-sm">
-                        <li><i class="fas fa-check text-yellow-500 mr-2"></i> Diskon 10% All Item</li>
-                        <li><i class="fas fa-check text-yellow-500 mr-2"></i> Gratis Ongkir Tanpa Min.</li>
-                        <li><i class="fas fa-check text-yellow-500 mr-2"></i> Prioritas Pre-Order</li>
+                        <li><i class="fas fa-check text-batik-500 mr-2"></i> Bahan Katun Primisima</li>
+                        <li><i class="fas fa-check text-batik-500 mr-2"></i> Motif Pakem / Klasik</li>
+                        <li><i class="fas fa-check text-batik-500 mr-2"></i> Jahitan Butik Halus</li>
                     </ul>
-                    <a href="#" class="block w-full py-3 bg-white text-brown-900 font-bold text-xs uppercase tracking-widest hover:bg-gray-100">Join Member</a>
+                    <a href="#" class="block w-full py-2 bg-batik-500 text-white font-bold rounded hover:bg-batik-600 transition">Lihat Katalog</a>
                 </div>
-                
-                 <div class="bg-white p-8 shadow-sm hover:shadow-xl transition border border-gray-100">
-                    <h3 class="text-lg font-bold text-brown-500 mb-4 uppercase tracking-widest">Wholesale</h3>
-                    <div class="text-4xl font-serif font-bold text-brown-900 mb-6">Grosir</div>
+
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl transition relative border-t-4 border-gold-500">
+                    <h3 class="text-lg font-bold text-gold-500 mb-2 uppercase">Royal Collection</h3>
+                    <div class="text-3xl font-serif font-bold text-batik-900 mb-6">Sutra Atbm</div>
+                    <p class="text-gray-500 text-sm mb-6">Karya seni masterpiece untuk kolektor dan acara spesial.</p>
                     <ul class="text-left text-gray-600 space-y-3 mb-8 text-sm">
-                        <li><i class="fas fa-check text-brown-500 mr-2"></i> Minimal 20 Pcs</li>
-                        <li><i class="fas fa-check text-brown-500 mr-2"></i> Harga Reseller Spesial</li>
-                        <li><i class="fas fa-check text-brown-500 mr-2"></i> Support Marketing</li>
+                        <li><i class="fas fa-check text-batik-500 mr-2"></i> Sutra Baron / ATBM</li>
+                        <li><i class="fas fa-check text-batik-500 mr-2"></i> Full Tulis Halus</li>
+                        <li><i class="fas fa-check text-batik-500 mr-2"></i> Sertifikat Keaslian</li>
                     </ul>
-                    <a href="#" class="block w-full py-3 bg-gray-100 text-brown-900 font-bold text-xs uppercase tracking-widest hover:bg-gray-200">Hubungi Kami</a>
+                    <a href="#" class="block w-full py-2 bg-gray-100 text-batik-800 font-bold rounded hover:bg-gray-200 transition">Kontak Admin</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="testimonials" class="py-24 bg-white">
+    <section id="testimonials" class="py-20 bg-white">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-serif font-bold text-brown-900 text-center mb-16">Kata Mereka</h2>
+            <h2 class="text-3xl font-serif font-bold text-batik-900 text-center mb-16">Ulasan Pelanggan</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div class="bg-brown-50 p-8 relative">
-                    <i class="fas fa-quote-left text-4xl text-brown-200 absolute top-4 left-4"></i>
-                    <p class="text-gray-600 italic mb-6 relative z-10">"Jatuh cinta banget sama bahannya! Adem dipakai seharian di Jakarta yang panas. Warnanya juga *earthy* banget, gampang di mix and match."</p>
+                <div class="bg-batik-50 p-8 rounded-br-3xl rounded-tl-3xl border-l-4 border-batik-700">
+                    <p class="italic text-gray-600 mb-6">"Saya membeli kemeja batik tulis untuk suami saya. Kualitas kainnya luar biasa, adem dipakai dan motifnya sangat detail. Benar-benar warisan budaya yang berkelas."</p>
                     <div class="flex items-center">
-                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-12 h-12 rounded-full mr-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4 overflow-hidden">
+                             <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="User" class="w-full h-full object-cover">
+                        </div>
                         <div>
-                            <h5 class="font-bold text-brown-900">Rina S.</h5>
-                            <span class="text-xs text-gray-500">Jakarta Selatan</span>
+                            <h5 class="font-bold text-batik-900">Andini Pratiwi</h5>
+                            <span class="text-xs text-gray-500">Surabaya</span>
                         </div>
                     </div>
                 </div>
-                <div class="bg-brown-50 p-8 relative">
-                    <i class="fas fa-quote-left text-4xl text-brown-200 absolute top-4 left-4"></i>
-                    <p class="text-gray-600 italic mb-6 relative z-10">"Pengiriman cepat dan packagingnya rapi banget, pakai box daur ulang jadi berasa beli kado buat diri sendiri. Recommended!"</p>
+                <div class="bg-batik-50 p-8 rounded-br-3xl rounded-tl-3xl border-l-4 border-batik-700">
+                    <p class="italic text-gray-600 mb-6">"Pelayanan custom fitting-nya sangat membantu. Kebaya yang saya pesan pas sekali di badan, dan packagingnya sangat niat. Sangat direkomendasikan!"</p>
                     <div class="flex items-center">
-                        <img src="https://randomuser.me/api/portraits/women/68.jpg" class="w-12 h-12 rounded-full mr-4">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" class="w-full h-full object-cover">
+                        </div>
                         <div>
-                            <h5 class="font-bold text-brown-900">Amanda D.</h5>
-                            <span class="text-xs text-gray-500">Bandung</span>
+                            <h5 class="font-bold text-batik-900">Budi Santoso</h5>
+                            <span class="text-xs text-gray-500">Jakarta</span>
                         </div>
                     </div>
                 </div>
@@ -336,23 +402,30 @@
         </div>
     </section>
 
-    <section id="faq" class="py-20 bg-brown-50">
-        <div class="container mx-auto px-6 max-w-2xl">
-            <h2 class="text-3xl font-serif font-bold text-brown-900 text-center mb-10">Pertanyaan Umum</h2>
+    <section id="faq" class="py-20 bg-batik-100">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <h2 class="text-3xl font-serif font-bold text-batik-900 text-center mb-10">Tanya Jawab</h2>
             <div class="space-y-4">
-                <details class="group bg-white p-5 shadow-sm cursor-pointer">
-                    <summary class="flex justify-between items-center font-bold text-brown-800 list-none">
-                        <span>Bagaimana cara menentukan ukuran?</span>
+                <details class="group bg-white p-6 rounded-lg shadow-sm cursor-pointer">
+                    <summary class="flex justify-between items-center font-semibold text-batik-800 list-none">
+                        <span>Bagaimana cara merawat Batik Tulis?</span>
                         <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
                     </summary>
-                    <p class="text-gray-600 mt-4 text-sm leading-relaxed">Kami menyediakan Size Chart di setiap halaman produk. Ukuran kami menggunakan standar ukuran Indonesia (S-XL).</p>
+                    <p class="text-gray-600 mt-4 leading-relaxed text-sm">Sebaiknya dicuci menggunakan tangan dengan lerak atau shampo bayi. Jangan dijemur langsung di bawah sinar matahari, cukup diangin-anginkan saja.</p>
                 </details>
-                <details class="group bg-white p-5 shadow-sm cursor-pointer">
-                    <summary class="flex justify-between items-center font-bold text-brown-800 list-none">
-                        <span>Apakah bisa tukar size?</span>
+                <details class="group bg-white p-6 rounded-lg shadow-sm cursor-pointer">
+                    <summary class="flex justify-between items-center font-semibold text-batik-800 list-none">
+                        <span>Apakah bisa memesan seragam dalam jumlah banyak?</span>
                         <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
                     </summary>
-                    <p class="text-gray-600 mt-4 text-sm leading-relaxed">Ya, penukaran size maksimal 3 hari setelah barang diterima, dengan syarat hangtag masih terpasang.</p>
+                    <p class="text-gray-600 mt-4 leading-relaxed text-sm">Tentu bisa. Kami melayani pemesanan seragam untuk kantor, panitia pernikahan, atau organisasi dengan harga khusus.</p>
+                </details>
+                <details class="group bg-white p-6 rounded-lg shadow-sm cursor-pointer">
+                    <summary class="flex justify-between items-center font-semibold text-batik-800 list-none">
+                        <span>Berapa lama pengiriman barang?</span>
+                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="text-gray-600 mt-4 leading-relaxed text-sm">Untuk produk ready stock, pengiriman 2-4 hari kerja. Untuk pre-order atau custom size, estimasi 7-14 hari kerja.</p>
                 </details>
             </div>
         </div>
@@ -360,105 +433,112 @@
 
     <section id="blog" class="py-20 bg-white">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-serif font-bold text-brown-900 text-center mb-12">Journal</h2>
+            <h2 class="text-3xl font-serif font-bold text-batik-900 text-center mb-12">Jurnal Budaya</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <article class="cursor-pointer group">
-                    <div class="overflow-hidden mb-4">
-                        <img src="https://images.unsplash.com/photo-1485230946086-1d99d50b25e3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-700">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1548897711-829d60528271?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
                     </div>
-                    <span class="text-xs text-brown-500 font-bold uppercase tracking-widest">Tips Fashion</span>
-                    <h3 class="text-xl font-bold text-brown-900 mt-2 mb-2 group-hover:text-brown-600 transition">Tren Warna Earth Tone 2024</h3>
-                    <p class="text-gray-500 text-sm">Cara memadukan warna coklat dan krem agar terlihat elegan...</p>
+                    <span class="text-xs text-batik-500 font-bold uppercase">Sejarah</span>
+                    <h3 class="text-xl font-bold text-batik-900 mt-2 mb-2 group-hover:text-batik-600 transition">Makna Motif Parang</h3>
+                    <p class="text-gray-500 text-sm">Mengulik filosofi kepemimpinan dan kekuatan di balik motif parang...</p>
                 </article>
                 <article class="cursor-pointer group">
-                    <div class="overflow-hidden mb-4">
-                        <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-700">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1598343177938-1a3b5ce8d48c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
                     </div>
-                    <span class="text-xs text-brown-500 font-bold uppercase tracking-widest">Gaya Hidup</span>
-                    <h3 class="text-xl font-bold text-brown-900 mt-2 mb-2 group-hover:text-brown-600 transition">Kenapa Sustainable Fashion?</h3>
-                    <p class="text-gray-500 text-sm">Dampak industri fashion terhadap lingkungan dan solusinya...</p>
+                    <span class="text-xs text-batik-500 font-bold uppercase">Tips</span>
+                    <h3 class="text-xl font-bold text-batik-900 mt-2 mb-2 group-hover:text-batik-600 transition">Batik untuk Milenial</h3>
+                    <p class="text-gray-500 text-sm">Cara memadupadankan batik agar terlihat kasual dan trendi...</p>
                 </article>
                 <article class="cursor-pointer group">
-                    <div class="overflow-hidden mb-4">
-                        <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-700">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1576402092591-6458564e976b?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500">
                     </div>
-                    <span class="text-xs text-brown-500 font-bold uppercase tracking-widest">OOTD</span>
-                    <h3 class="text-xl font-bold text-brown-900 mt-2 mb-2 group-hover:text-brown-600 transition">Inspirasi Outfit Kantor</h3>
-                    <p class="text-gray-500 text-sm">Tampil profesional namun tetap nyaman seharian...</p>
+                    <span class="text-xs text-batik-500 font-bold uppercase">Event</span>
+                    <h3 class="text-xl font-bold text-batik-900 mt-2 mb-2 group-hover:text-batik-600 transition">Hari Batik Nasional</h3>
+                    <p class="text-gray-500 text-sm">Keseruan perayaan hari batik di galeri Warisan...</p>
                 </article>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-24 bg-brown-900 text-white">
-        <div class="container mx-auto px-6">
+    <section id="contact" class="py-24 bg-batik-900 text-white relative">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/batik.png')] opacity-10"></div>
+        <div class="container mx-auto px-6 relative z-10">
             <div class="flex flex-col md:flex-row gap-16">
                 <div class="md:w-1/2">
                     <h2 class="text-4xl font-serif font-bold mb-6">Hubungi Kami</h2>
-                    <p class="text-brown-200 mb-8 font-light">Punya pertanyaan tentang produk atau kerjasama? Kirimkan pesan kepada kami.</p>
+                    <p class="text-batik-200 mb-8 leading-relaxed">Tertarik dengan koleksi kami atau ingin berkonsultasi mengenai pesanan khusus? Silakan hubungi kami.</p>
                     
                     <div class="space-y-6">
                         <div class="flex items-start">
-                            <i class="fas fa-map-marker-alt mt-1 mr-4 text-brown-400"></i>
+                            <div class="w-10 h-10 rounded bg-batik-700 flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
                             <div>
-                                <h5 class="font-bold">Butik SANA</h5>
-                                <p class="text-sm text-brown-200">Jl. Kemang Raya No. 12, Jakarta Selatan</p>
+                                <h5 class="font-bold">Galeri Warisan</h5>
+                                <p class="text-sm text-batik-200">Jl. Malioboro No. 123, Yogyakarta</p>
                             </div>
                         </div>
                         <div class="flex items-start">
-                            <i class="fas fa-envelope mt-1 mr-4 text-brown-400"></i>
+                            <div class="w-10 h-10 rounded bg-batik-700 flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
                             <div>
                                 <h5 class="font-bold">Email</h5>
-                                <p class="text-sm text-brown-200">hello@sana-store.com</p>
+                                <p class="text-sm text-batik-200">info@batikwarisan.id</p>
                             </div>
                         </div>
                         <div class="flex items-start">
-                            <i class="fab fa-whatsapp mt-1 mr-4 text-brown-400"></i>
+                            <div class="w-10 h-10 rounded bg-batik-700 flex items-center justify-center mr-4">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
                             <div>
                                 <h5 class="font-bold">WhatsApp</h5>
-                                <p class="text-sm text-brown-200">+62 812-3456-7890</p>
+                                <p class="text-sm text-batik-200">+62 812-3456-7890</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="md:w-1/2 bg-white p-8 rounded text-gray-800">
+                <div class="md:w-1/2 bg-white p-8 rounded shadow-2xl text-gray-800">
                     <form>
                         <div class="mb-4">
-                            <label class="block text-xs font-bold uppercase mb-2">Nama</label>
-                            <input type="text" class="w-full border-b-2 border-gray-200 py-2 focus:outline-none focus:border-brown-800 transition bg-transparent" placeholder="Nama Anda">
+                            <label class="block text-sm font-bold text-batik-800 mb-2">Nama Lengkap</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-batik-500 bg-gray-50" placeholder="Nama Anda">
                         </div>
                         <div class="mb-4">
-                            <label class="block text-xs font-bold uppercase mb-2">Email</label>
-                            <input type="email" class="w-full border-b-2 border-gray-200 py-2 focus:outline-none focus:border-brown-800 transition bg-transparent" placeholder="email@anda.com">
+                            <label class="block text-sm font-bold text-batik-800 mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-batik-500 bg-gray-50" placeholder="email@anda.com">
                         </div>
                         <div class="mb-6">
-                            <label class="block text-xs font-bold uppercase mb-2">Pesan</label>
-                            <textarea rows="3" class="w-full border-b-2 border-gray-200 py-2 focus:outline-none focus:border-brown-800 transition bg-transparent" placeholder="Tulis pesan..."></textarea>
+                            <label class="block text-sm font-bold text-batik-800 mb-2">Pesan</label>
+                            <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-batik-500 bg-gray-50" placeholder="Tulis pertanyaan Anda..."></textarea>
                         </div>
-                        <button class="w-full bg-brown-800 text-white font-bold py-3 uppercase tracking-widest hover:bg-brown-700 transition">Kirim</button>
+                        <button class="w-full bg-batik-700 text-white font-bold py-3 rounded hover:bg-batik-800 transition shadow-lg">Kirim Pesan</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-black text-white py-12 border-t border-gray-800">
+    <footer class="bg-black text-white py-12 border-t border-batik-800">
         <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
             <div class="mb-6 md:mb-0 text-center md:text-left">
-                <span class="text-2xl font-serif font-bold tracking-widest">SANA.</span>
-                <p class="text-xs text-gray-500 mt-2">© 2024 SANA Fashion. All rights reserved.</p>
+                <span class="text-2xl font-serif font-bold tracking-widest text-batik-500">WARISAN</span>
+                <p class="text-xs text-gray-500 mt-2">© 2024 Warisan Batik Nusantara. Hak Cipta Dilindungi.</p>
             </div>
             <div class="flex space-x-6">
-                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram text-xl"></i></a>
-                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-tiktok text-xl"></i></a>
-                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-pinterest text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-batik-500 transition"><i class="fab fa-instagram text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-batik-500 transition"><i class="fab fa-facebook text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-batik-500 transition"><i class="fab fa-youtube text-xl"></i></a>
             </div>
         </div>
     </footer>
 
-    <button id="backToTopBtn" onclick="scrollToTop()" class="fixed bottom-8 right-8 bg-brown-800 hover:bg-brown-600 text-white w-12 h-12 flex items-center justify-center shadow-2xl transition-all duration-500 opacity-0 invisible translate-y-10 z-50">
-        <i class="fas fa-arrow-up"></i>
+    <button id="backToTopBtn" onclick="scrollToTop()" class="fixed bottom-8 right-8 bg-batik-700/90 hover:bg-batik-900 text-white w-12 h-12 rounded-full shadow-2xl transition-all duration-500 opacity-0 invisible translate-y-10 z-50 flex items-center justify-center border border-batik-500">
+        <i class="fas fa-chevron-up"></i>
     </button>
 
     <script>
@@ -477,13 +557,13 @@
             });
         });
 
-        // 2. Back to Top & Navbar Scroll Logic
+        // 2. Back to Top & Navbar Scroll Effect
         const backToTopBtn = document.getElementById("backToTopBtn");
         const navbar = document.getElementById("navbar");
 
         window.onscroll = function() {
-            // Back to Top Button Visibility
-            if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+            // Logic Back to Top
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
                 backToTopBtn.classList.remove("opacity-0", "invisible", "translate-y-10");
                 backToTopBtn.classList.add("opacity-100", "visible", "translate-y-0");
             } else {
@@ -491,17 +571,17 @@
                 backToTopBtn.classList.remove("opacity-100", "visible", "translate-y-0");
             }
 
-            // Navbar Visual Change
+            // Logic Navbar Glass Effect
             if (document.documentElement.scrollTop > 50) {
-                navbar.classList.add("shadow-md", "py-2");
-                navbar.classList.remove("py-4");
+                navbar.classList.add("glass-header", "shadow-lg");
+                navbar.classList.remove("border-white/10");
             } else {
-                navbar.classList.remove("shadow-md", "py-2");
-                navbar.classList.add("py-4");
+                navbar.classList.remove("glass-header", "shadow-lg");
+                navbar.classList.add("border-white/10");
             }
         };
 
-        // Scroll to Top Action
+        // Scroll Function
         function scrollToTop() {
             window.scrollTo({
                 top: 0,
