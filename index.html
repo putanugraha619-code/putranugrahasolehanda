@@ -1,363 +1,278 @@
 <!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sogan Heritage | Koleksi Busana Tradisional Eksklusif</title>
-    
+    <title>Portfolio Teknik Mesin</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-
+    <!-- Custom Tailwind Config for Brown Theme -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'heritage': {
-                            50: '#fdf8f4',
-                            100: '#f9eee2',
-                            200: '#f1d6b8',
-                            500: '#b87333', /* Coklat Tembaga */
-                            700: '#7d4a27', /* Coklat Kayu */
-                            800: '#4a2c18', /* Coklat Sogan */
-                            900: '#2d1a0e',
-                        },
-                    },
-                    fontFamily: {
-                        'serif': ['Marcellus', 'serif'],
-                        'sans': ['Plus Jakarta Sans', 'sans-serif'],
+                        brown: {
+                            50: '#fdf8f6',
+                            100: '#f2e8e5',
+                            200: '#eaddd7',
+                            300: '#e0cec7',
+                            400: '#d2bab0',
+                            500: '#bfa094',
+                            600: '#a18072',
+                            700: '#977669',
+                            800: '#846358',
+                            900: '#43302b',
+                        }
                     }
                 }
             }
         }
     </script>
-    <style>
-        .parallax {
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        .text-shadow {
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-    </style>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body class="font-sans text-heritage-900 bg-heritage-50">
-
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-4">
-        <div class="container mx-auto px-6 flex justify-between items-center">
-            <a href="#" class="text-2xl font-serif font-bold tracking-widest text-heritage-800">
-                SOGAN<span class="text-heritage-500">.</span>
-            </a>
-            
-            <div class="hidden lg:flex space-x-8 text-sm font-semibold uppercase tracking-wider">
-                <a href="#home" class="hover:text-heritage-500 transition">Beranda</a>
-                <a href="#about" class="hover:text-heritage-500 transition">Kisah</a>
-                <a href="#projects" class="hover:text-heritage-500 transition">Koleksi</a>
-                <a href="#pricing" class="hover:text-heritage-500 transition">Harga</a>
-                <a href="#blog" class="hover:text-heritage-500 transition">Blog</a>
-                <a href="#contact" class="hover:text-heritage-500 transition">Kontak</a>
+<body class="bg-brown-50 text-brown-900 font-sans">
+    <!-- Header -->
+    <header class="bg-brown-800 text-brown-100 sticky top-0 z-50 shadow-lg">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold">Teknik Mesin Portfolio</div>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#home" class="hover:text-brown-300 transition">Home</a></li>
+                <li><a href="#about" class="hover:text-brown-300 transition">About</a></li>
+                <li><a href="#services" class="hover:text-brown-300 transition">Services</a></li>
+                <li><a href="#features" class="hover:text-brown-300 transition">Features</a></li>
+                <li><a href="#project" class="hover:text-brown-300 transition">Project</a></li>
+                <li><a href="#team" class="hover:text-brown-300 transition">Team</a></li>
+                <li><a href="#pricing" class="hover:text-brown-300 transition">Pricing</a></li>
+                <li><a href="#testimonials" class="hover:text-brown-300 transition">Testimonials</a></li>
+                <li><a href="#faq" class="hover:text-brown-300 transition">FAQ</a></li>
+                <li><a href="#blog" class="hover:text-brown-300 transition">Blog</a></li>
+                <li><a href="#contact" class="hover:text-brown-300 transition">Contact</a></li>
+            </ul>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-brown-100 focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
-
-            <button class="bg-heritage-800 text-white px-5 py-2 rounded-full text-sm hover:bg-heritage-700 transition lg:block hidden">
-                Pesan Custom
-            </button>
-
-            <button id="mobile-btn" class="lg:hidden text-heritage-800 text-2xl">
-                <i class="fas fa-bars"></i>
-            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-brown-700 px-4 py-2">
+            <ul class="space-y-2">
+                <li><a href="#home" class="block hover:text-brown-300 transition">Home</a></li>
+                <li><a href="#about" class="block hover:text-brown-300 transition">About</a></li>
+                <li><a href="#services" class="block hover:text-brown-300 transition">Services</a></li>
+                <li><a href="#features" class="block hover:text-brown-300 transition">Features</a></li>
+                <li><a href="#project" class="block hover:text-brown-300 transition">Project</a></li>
+                <li><a href="#team" class="block hover:text-brown-300 transition">Team</a></li>
+                <li><a href="#pricing" class="block hover:text-brown-300 transition">Pricing</a></li>
+                <li><a href="#testimonials" class="block hover:text-brown-300 transition">Testimonials</a></li>
+                <li><a href="#faq" class="block hover:text-brown-300 transition">FAQ</a></li>
+                <li><a href="#blog" class="block hover:text-brown-300 transition">Blog</a></li>
+                <li><a href="#contact" class="block hover:text-brown-300 transition">Contact</a></li>
+            </ul>
         </div>
-    </nav>
+    </header>
 
-    <section id="home" class="parallax h-screen flex items-center relative" style="background-image: url('https://images.unsplash.com/photo-1551028150-64b9f398f678?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');">
-        <div class="absolute inset-0 bg-black/40"></div>
-        <div class="container mx-auto px-6 relative z-10 text-white">
-            <h4 class="uppercase tracking-[0.4em] mb-4 text-heritage-200">Mahakarya Nusantara</h4>
-            <h1 class="text-5xl md:text-7xl font-serif mb-6 text-shadow">Tradisi Dalam <br><span class="italic">Modernitas</span></h1>
-            <p class="max-w-md text-lg text-heritage-100 mb-8">Setiap goresan canting menceritakan filosofi hidup. Temukan koleksi batik tulis premium kami.</p>
-            <a href="#projects" class="bg-heritage-500 text-white px-8 py-4 inline-block hover:bg-heritage-600 transition shadow-xl font-bold uppercase tracking-widest text-sm">Jelajahi Koleksi</a>
-        </div>
-    </section>
-
-    <section id="about" class="py-24">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col lg:flex-row items-center gap-16">
-                <div class="lg:w-1/2">
-                    <img src="https://images.unsplash.com/photo-1590736704728-f4730bb30770?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="About" class="rounded-lg shadow-2xl">
-                </div>
-                <div class="lg:w-1/2">
-                    <span class="text-heritage-500 font-bold uppercase tracking-widest text-sm">Sejak 1992</span>
-                    <h2 class="text-4xl font-serif mt-4 mb-6">Menenun Cerita, Melestarikan Budaya</h2>
-                    <p class="text-gray-600 leading-relaxed mb-6">Sogan Heritage lahir dari keinginan untuk membawa pakaian tradisional ke panggung dunia. Kami bekerja sama dengan 50+ pengrajin lokal untuk memastikan setiap helai kain adalah karya seni yang murni.</p>
-                    <div class="grid grid-cols-2 gap-6">
-                        <div>
-                            <h3 class="font-serif text-2xl text-heritage-700">100%</h3>
-                            <p class="text-sm text-gray-500">Handmade Tulis</p>
-                        </div>
-                        <div>
-                            <h3 class="font-serif text-2xl text-heritage-700">Pewarna</h3>
-                            <p class="text-sm text-gray-500">Alami & Organik</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- Home Section -->
+    <section id="home" class="bg-gradient-to-r from-brown-200 to-brown-400 py-20 text-center">
+        <div class="container mx-auto px-4">
+            <h1 class="text-5xl font-bold mb-4">Welcome to Teknik Mesin Portfolio</h1>
+            <p class="text-xl mb-8">Innovative Engineering Solutions for a Better Tomorrow</p>
+            <a href="#contact" class="bg-brown-800 text-brown-100 px-6 py-3 rounded-lg hover:bg-brown-700 transition">Get Started</a>
         </div>
     </section>
 
-    <section id="services" class="py-20 bg-heritage-100">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-serif">Mengapa Memilih Kami?</h2>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-brown-50">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Engineering" class="rounded-lg shadow-lg">
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
-                    <i class="fas fa-gem text-3xl text-heritage-500 mb-6"></i>
-                    <h3 class="font-bold mb-4">Kualitas Ningrat</h3>
-                    <p class="text-gray-500 text-sm">Hanya menggunakan sutra dan katun primisima terbaik untuk kenyamanan maksimal.</p>
-                </div>
-                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition border-b-4 border-heritage-500">
-                    <i class="fas fa-cut text-3xl text-heritage-500 mb-6"></i>
-                    <h3 class="font-bold mb-4">Tailor-Made</h3>
-                    <p class="text-gray-500 text-sm">Layanan custom ukuran untuk memastikan busana tradisional pas di tubuh Anda.</p>
-                </div>
-                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
-                    <i class="fas fa-leaf text-3xl text-heritage-500 mb-6"></i>
-                    <h3 class="font-bold mb-4">Eco-Conscious</h3>
-                    <p class="text-gray-500 text-sm">Proses produksi ramah lingkungan dengan pengolahan limbah pewarna yang aman.</p>
-                </div>
+            <div class="md:w-1/2 md:pl-8">
+                <h2 class="text-3xl font-bold mb-4 text-brown-800">About Us</h2>
+                <p class="text-brown-700">We are a team of passionate mechanical engineers dedicated to delivering cutting-edge solutions in design, manufacturing, and innovation. With years of experience, we bring ideas to life.</p>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="py-24">
-        <div class="container mx-auto px-6">
-            <div class="flex justify-between items-end mb-12">
-                <div>
-                    <h2 class="text-4xl font-serif">Koleksi Terpilih</h2>
-                    <p class="text-gray-500 mt-2">Karya terbaru musim ini</p>
-                </div>
-                <button class="text-heritage-700 font-bold border-b-2 border-heritage-700">Lihat Semua</button>
-            </div>
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-brown-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8 text-brown-800">Our Services</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="group cursor-pointer">
-                    <div class="relative overflow-hidden rounded-lg">
-                        <img src="https://images.unsplash.com/photo-1610136639149-9f83501205c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-96 object-cover group-hover:scale-110 transition duration-500">
-                        <div class="absolute bottom-4 left-4">
-                            <span class="bg-white px-3 py-1 text-xs font-bold uppercase">Kebaya Modern</span>
-                        </div>
-                    </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <i class="fas fa-cogs text-4xl text-brown-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Design & Prototyping</h3>
+                    <p class="text-brown-700">Custom design and rapid prototyping for mechanical systems.</p>
                 </div>
-                <div class="group cursor-pointer">
-                    <div class="relative overflow-hidden rounded-lg">
-                        <img src="https://images.unsplash.com/photo-1596704017254-9b121068fb31?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-96 object-cover group-hover:scale-110 transition duration-500">
-                        <div class="absolute bottom-4 left-4">
-                            <span class="bg-white px-3 py-1 text-xs font-bold uppercase">Batik Pria Tulis</span>
-                        </div>
-                    </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <i class="fas fa-tools text-4xl text-brown-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Manufacturing</h3>
+                    <p class="text-brown-700">Precision manufacturing using state-of-the-art equipment.</p>
                 </div>
-                <div class="group cursor-pointer">
-                    <div class="relative overflow-hidden rounded-lg">
-                        <img src="https://images.unsplash.com/photo-1605218427368-2c2628468b30?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-96 object-cover group-hover:scale-110 transition duration-500">
-                        <div class="absolute bottom-4 left-4">
-                            <span class="bg-white px-3 py-1 text-xs font-bold uppercase">Aksesoris Tenun</span>
-                        </div>
-                    </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <i class="fas fa-lightbulb text-4xl text-brown-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Consultation</h3>
+                    <p class="text-brown-700">Expert advice on mechanical engineering challenges.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-20 bg-heritage-900 text-white text-center">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-serif mb-12">Dibalik Layar</h2>
-            <div class="flex justify-center gap-12 flex-wrap">
-                <div class="w-48">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" class="w-32 h-32 rounded-full mx-auto mb-4 border-2 border-heritage-500 object-cover">
-                    <h4 class="font-bold">Andini Putri</h4>
-                    <p class="text-heritage-200 text-xs uppercase tracking-widest">Master Designer</p>
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-brown-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center text-brown-800">Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="flex items-center">
+                    <i class="fas fa-check-circle text-brown-600 text-2xl mr-4"></i>
+                    <p class="text-brown-700">High-quality materials and precision engineering.</p>
                 </div>
-                <div class="w-48">
-                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" class="w-32 h-32 rounded-full mx-auto mb-4 border-2 border-heritage-500 object-cover">
-                    <h4 class="font-bold">Bambang S.</h4>
-                    <p class="text-heritage-200 text-xs uppercase tracking-widest">Kepala Pengrajin</p>
+                <div class="flex items-center">
+                    <i class="fas fa-check-circle text-brown-600 text-2xl mr-4"></i>
+                    <p class="text-brown-700">Sustainable and eco-friendly practices.</p>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-check-circle text-brown-600 text-2xl mr-4"></i>
+                    <p class="text-brown-700">24/7 customer support and maintenance.</p>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-check-circle text-brown-600 text-2xl mr-4"></i>
+                    <p class="text-brown-700">Innovative solutions tailored to your needs.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="pricing" class="py-24 bg-heritage-50">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-serif">Kategori Koleksi</h2>
+    <!-- Project Section -->
+    <section id="project" class="py-20 bg-brown-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8 text-brown-800">Our Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-4 rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Project 1" class="w-full h-48 object-cover rounded mb-4">
+                    <h3 class="text-xl font-bold mb-2">Automotive Engine Design</h3>
+                    <p class="text-brown-700">Custom engine design for high-performance vehicles.</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Project 2" class="w-full h-48 object-cover rounded mb-4">
+                    <h3 class="text-xl font-bold mb-2">Robotic Arm Prototype</h3>
+                    <p class="text-brown-700">Advanced robotic arm for industrial automation.</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Project 3" class="w-full h-48 object-cover rounded mb-4">
+                    <h3 class="text-xl font-bold mb-2">Sustainable Energy System</h3>
+                    <p class="text-brown-700">Eco-friendly energy solutions for modern homes.</p>
+                </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <div class="bg-white p-8 rounded-lg text-center border border-heritage-200">
-                    <h3 class="text-lg font-bold">Klasik (Cap)</h3>
-                    <div class="text-4xl font-serif my-6 text-heritage-800">Rp 350k<span class="text-sm font-sans text-gray-400 font-normal">/item</span></div>
-                    <ul class="text-sm text-gray-500 space-y-3 mb-8">
-                        <li>Bahan Katun Prima</li>
-                        <li>Motif Kontemporer</li>
-                        <li>Ready to Wear</li>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-20 bg-brown-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8 text-brown-800">Our Team</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Team Member 1" class="w-24 h-24 rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-bold">John Doe</h3>
+                    <p class="text-brown-700">Lead Engineer</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Team Member 2" class="w-24 h-24 rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-bold">Jane Smith</h3>
+                    <p class="text-brown-700">Design Specialist</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Team Member 3" class="w-24 h-24 rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-bold">Mike Johnson</h3>
+                    <p class="text-brown-700">Manufacturing Expert</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-brown-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8 text-brown-800">Pricing Plans</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4">Basic</h3>
+                    <p class="text-4xl font-bold text-brown-600 mb-4">$99</p>
+                    <ul class="text-brown-700 mb-6">
+                        <li>Design Consultation</li>
+                        <li>Basic Prototyping</li>
+                        <li>Email Support</li>
                     </ul>
-                    <button class="w-full py-3 border border-heritage-800 hover:bg-heritage-800 hover:text-white transition">Pilih Paket</button>
+                    <button class="bg-brown-600 text-white px-6 py-2 rounded hover:bg-brown-700">Choose Plan</button>
                 </div>
-                <div class="bg-heritage-800 p-8 rounded-lg text-center text-white transform scale-105 shadow-2xl">
-                    <h3 class="text-lg font-bold">Premium (Tulis)</h3>
-                    <div class="text-4xl font-serif my-6 text-heritage-200">Rp 1.5jt<span class="text-sm font-sans text-heritage-100 font-normal">/item</span></div>
-                    <ul class="text-sm text-heritage-100 space-y-3 mb-8">
-                        <li>Bahan Sutra ATBM</li>
-                        <li>Motif Eksklusif Sogan</li>
-                        <li>Lining Full Tricot</li>
+                <div class="bg-brown-600 text-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4">Pro</h3>
+                    <p class="text-4xl font-bold mb-4">$299</p>
+                    <ul class="mb-6">
+                        <li>Advanced Design</li>
+                        <li>Full Prototyping</li>
+                        <li>24/7 Support</li>
                     </ul>
-                    <button class="w-full py-3 bg-heritage-500 hover:bg-heritage-600 transition">Paling Populer</button>
+                    <button class="bg-white text-brown-600 px-6 py-2 rounded hover:bg-gray-200">Choose Plan</button>
                 </div>
-                <div class="bg-white p-8 rounded-lg text-center border border-heritage-200">
-                    <h3 class="text-lg font-bold">Mahakarya</h3>
-                    <div class="text-4xl font-serif my-6 text-heritage-800">Rp 5jt++</div>
-                    <ul class="text-sm text-gray-500 space-y-3 mb-8">
-                        <li>Koleksi Museum</li>
-                        <li>Proses 6 Bulan</li>
-                        <li>Sertifikat Keaslian</li>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4">Enterprise</h3>
+                    <p class="text-4xl font-bold text-brown-600 mb-4">$599</p>
+                    <ul class="text-brown-700 mb-6">
+                        <li>Custom Solutions</li>
+                        <li>Manufacturing</li>
+                        <li>Dedicated Team</li>
                     </ul>
-                    <button class="w-full py-3 border border-heritage-800 hover:bg-heritage-800 hover:text-white transition">Hubungi Ahli</button>
+                    <button class="bg-brown-600 text-white px-6 py-2 rounded hover:bg-brown-700">Choose Plan</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-20 bg-heritage-100">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-serif mb-12">Kata Pelanggan</h2>
-            <div class="max-w-3xl mx-auto italic text-xl text-heritage-800">
-                "Batik tulisnya sangat halus. Saya memakainya untuk acara kenegaraan dan mendapat banyak pujian. Kualitas jahitannya benar-benar kelas butik."
-                <div class="mt-6 not-italic font-bold text-sm text-gray-600 uppercase">— Ibu Rahayu, Jakarta</div>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-brown-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8 text-brown-800">Testimonials</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <p class="text-brown-700 mb-4">"Excellent work! Their engineering solutions exceeded our expectations."</p>
+                    <p class="font-bold">- Client A</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <p class="text-brown-700 mb-4">"Professional team with innovative ideas. Highly recommended."</p>
+                    <p class="font-bold">- Client B</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="py-24">
-        <div class="container mx-auto px-6 max-w-3xl">
-            <h2 class="text-3xl font-serif text-center mb-12">Pertanyaan Umum</h2>
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-brown-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center text-brown-800">FAQ</h2>
             <div class="space-y-4">
-                <details class="group bg-white p-6 border border-heritage-100 rounded-lg cursor-pointer">
-                    <summary class="font-bold flex justify-between items-center list-none">
-                        Bagaimana cara merawat batik tulis?
-                        <i class="fas fa-chevron-down text-heritage-500 group-open:rotate-180 transition"></i>
-                    </summary>
-                    <p class="mt-4 text-gray-500 text-sm">Gunakan sabun lerak atau sampo bayi. Jangan jemur di bawah sinar matahari langsung, cukup diangin-anginkan saja di tempat teduh.</p>
+                <details class="bg-white p-4 rounded-lg shadow">
+                    <summary class="font-bold cursor-pointer">What services do you offer?</summary>
+                    <p class="mt-2 text-brown-700">We offer design, prototyping, manufacturing, and consultation services.</p>
                 </details>
-                <details class="group bg-white p-6 border border-heritage-100 rounded-lg cursor-pointer">
-                    <summary class="font-bold flex justify-between items-center list-none">
-                        Apakah bisa memesan ukuran custom?
-                        <i class="fas fa-chevron-down text-heritage-500 group-open:rotate-180 transition"></i>
-                    </summary>
-                    <p class="mt-4 text-gray-500 text-sm">Ya, kami melayani pemesanan Made-to-Measure. Tim kami akan memandu Anda untuk pengukuran secara virtual atau di galeri kami.</p>
+                <details class="bg-white p-4 rounded-lg shadow">
+                    <summary class="font-bold cursor-pointer">How long does a project take?</summary>
+                    <p class="mt-2 text-brown-700">Project timelines vary, but we aim for efficiency and communicate progress regularly.</p>
                 </details>
             </div>
         </div>
     </section>
 
-    <section id="blog" class="py-24 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-serif text-center mb-12">Journal Budaya</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="group">
-                    <img src="https://images.unsplash.com/photo-1544201384-e9f029a10243?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="rounded-lg mb-4 h-60 w-full object-cover">
-                    <h3 class="font-bold hover:text-heritage-500 transition cursor-pointer">Makna Filosofis Motif Parang</h3>
-                    <p class="text-xs text-gray-400 mt-2">12 Okt 2023 | Fashion Heritage</p>
+    <!-- Blog Section -->
+    <section id="blog" class="py-20 bg-brown-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8 text-brown-800">Latest Blog Posts</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Blog 1" class="w-full h-48 object-cover rounded mb-4">
+                    <h3 class="text-xl font-bold mb-2">Advances in Mechanical Engineering</h3>
+                    <p class="text-brown-700">Exploring the latest trends in the field.</p>
                 </div>
-                <div class="group">
-                    <img src="https://images.unsplash.com/photo-1579781198654-2191b920401d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="rounded-lg mb-4 h-60 w-full object-cover">
-                    <h3 class="font-bold hover:text-heritage-500 transition cursor-pointer">Cara Membedakan Batik Tulis dan Cap</h3>
-                    <p class="text-xs text-gray-400 mt-2">05 Okt 2023 | Edukasi</p>
-                </div>
-                <div class="group">
-                    <img src="https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="rounded-lg mb-4 h-60 w-full object-cover">
-                    <h3 class="font-bold hover:text-heritage-500 transition cursor-pointer">Tren Kebaya di Era Milenial</h3>
-                    <p class="text-xs text-gray-400 mt-2">28 Sep 2023 | Life Style</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-24 bg-heritage-900 text-white">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                <div>
-                    <h2 class="text-4xl font-serif mb-8">Kunjungi Galeri Kami</h2>
-                    <p class="text-heritage-200 mb-8">Kami mengundang Anda untuk merasakan tekstur kain dan melihat proses pembatikan secara langsung.</p>
-                    <div class="space-y-4">
-                        <div class="flex items-center gap-4">
-                            <i class="fas fa-map-marker-alt text-heritage-500"></i>
-                            <span>Jl. Batik Kuno No. 12, Yogyakarta, Indonesia</span>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <i class="fas fa-phone text-heritage-500"></i>
-                            <span>+62 274 123 456</span>
-                        </div>
-                    </div>
-                    <div class="flex gap-4 mt-8">
-                        <a href="#" class="w-10 h-10 border border-heritage-700 flex items-center justify-center hover:bg-heritage-500 transition"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="w-10 h-10 border border-heritage-700 flex items-center justify-center hover:bg-heritage-500 transition"><i class="fab fa-facebook-f"></i></a>
-                    </div>
-                </div>
-                <form class="space-y-4">
-                    <input type="text" placeholder="Nama Lengkap" class="w-full bg-transparent border-b border-heritage-700 py-3 focus:outline-none focus:border-heritage-500">
-                    <input type="email" placeholder="Alamat Email" class="w-full bg-transparent border-b border-heritage-700 py-3 focus:outline-none focus:border-heritage-500">
-                    <textarea placeholder="Pesan Anda" rows="4" class="w-full bg-transparent border-b border-heritage-700 py-3 focus:outline-none focus:border-heritage-500"></textarea>
-                    <button class="bg-white text-heritage-900 px-10 py-3 font-bold hover:bg-heritage-200 transition">KIRIM PESAN</button>
-                </form>
-            </div>
-            <div class="border-t border-heritage-800 mt-24 pt-8 text-center text-sm text-heritage-400">
-                &copy; 2023 Sogan Heritage. Seluruh Hak Cipta Dilindungi.
-            </div>
-        </div>
-    </section>
-
-    <button id="backToTop" class="fixed bottom-8 right-8 bg-heritage-500 text-white w-12 h-12 rounded-full shadow-2xl invisible opacity-0 transition-all duration-300 hover:bg-heritage-700 z-[99]">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <script>
-        // Navbar scroll effect
-        const navbar = document.getElementById('navbar');
-        window.onscroll = function() {
-            if (window.scrollY > 50) {
-                navbar.classList.add('bg-white', 'shadow-md', 'py-2');
-                navbar.classList.remove('py-4', 'text-white');
-                navbar.classList.add('text-heritage-800');
-            } else {
-                navbar.classList.remove('bg-white', 'shadow-md', 'py-2');
-                navbar.classList.add('py-4');
-                navbar.classList.remove('text-heritage-800');
-            }
-
-            // Back to top button logic
-            const btt = document.getElementById('backToTop');
-            if (window.scrollY > 500) {
-                btt.classList.remove('invisible', 'opacity-0');
-                btt.classList.add('visible', 'opacity-100');
-            } else {
-                btt.classList.add('invisible', 'opacity-0');
-                btt.classList.remove('visible', 'opacity-100');
-            }
-        };
-
-        // Scroll to top action
-        document.getElementById('backToTop').onclick = function() {
-            window.scrollTo({top: 0, behavior: 'smooth'});
-        };
-
-        // Mobile menu toggle
-        const mobileBtn = document.getElementById('mobile-btn');
-        mobileBtn.onclick = function() {
-            // Sederhana: toggle class atau alert untuk demo
-            alert("Menu navigasi sedang disiapkan.");
-        };
-    </script>
-</body>
-</html>
+                <div class="
